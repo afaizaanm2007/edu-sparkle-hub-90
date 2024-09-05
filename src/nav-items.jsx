@@ -1,6 +1,6 @@
 import { HomeIcon, BookOpen, Users } from "lucide-react";
 import Home from "./pages/Home.jsx";
-import Products from "./pages/Products.jsx";
+import ProductOffering from "./pages/ProductOffering.jsx";
 import About from "./pages/About.jsx";
 
 export const navItems = [
@@ -11,10 +11,10 @@ export const navItems = [
     page: <Home />,
   },
   {
-    title: "Products",
-    to: "/products",
+    title: "Product Offering",
+    to: "/product-offering",
     icon: <BookOpen className="h-4 w-4" />,
-    page: <Products />,
+    page: <ProductOffering />,
   },
   {
     title: "About Us",
