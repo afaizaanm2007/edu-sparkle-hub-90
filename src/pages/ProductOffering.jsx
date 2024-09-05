@@ -8,6 +8,15 @@ import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 const ProductOffering = () => {
   const [selectedImage, setSelectedImage] = useState(null);
 
+  const features = [
+    { icon: <Zap className="w-6 h-6 text-purple-500" />, title: "AI-Powered Learning", description: "Personalized learning paths tailored to each student's needs." },
+    { icon: <Monitor className="w-6 h-6 text-purple-500" />, title: "Interactive Lessons", description: "Engaging, multimedia-rich content for enhanced understanding." },
+    { icon: <BarChart2 className="w-6 h-6 text-purple-500" />, title: "Progress Tracking", description: "Real-time analytics to monitor and improve student performance." },
+    { icon: <Users className="w-6 h-6 text-purple-500" />, title: "Collaborative Learning", description: "Tools for group projects and peer-to-peer learning." },
+    { icon: <CheckCircle className="w-6 h-6 text-purple-500" />, title: "Instant Feedback", description: "Immediate assessment and guidance for continuous improvement." },
+    { icon: <BookOpen className="w-6 h-6 text-purple-500" />, title: "Comprehensive Curriculum", description: "Aligned with state and national education standards." },
+  ];
+
   const uiGalleryItems = [
     { 
       src: "/ui-gallery-1.jpg", 
@@ -55,7 +64,41 @@ const ProductOffering = () => {
     <div className="min-h-screen flex flex-col bg-gray-50">
       <Header />
       <main className="flex-grow">
-        {/* ... (previous sections remain unchanged) ... */}
+        <section className="py-16 bg-white">
+          <div className="container mx-auto px-4">
+            <h1 className="text-4xl font-bold text-center text-purple-800 mb-8">Our Product Offering</h1>
+            <p className="text-center text-lg mb-12">Discover how Boomerang Learning is revolutionizing education with our innovative platform.</p>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index) => (
+                <Card key={index} className="hover:shadow-lg transition-shadow">
+                  <CardContent className="p-6">
+                    <div className="flex items-center mb-4">
+                      {feature.icon}
+                      <h3 className="text-xl font-semibold ml-3">{feature.title}</h3>
+                    </div>
+                    <p className="text-gray-600">{feature.description}</p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="py-16 bg-purple-100">
+          <div className="container mx-auto px-4">
+            <h2 className="text-3xl font-bold text-center text-purple-800 mb-8">How It Works</h2>
+            <div className="max-w-3xl mx-auto">
+              <ol className="list-decimal list-inside space-y-4">
+                <li className="text-lg"><span className="font-semibold">Sign Up:</span> Create an account for your school, classroom, or individual student.</li>
+                <li className="text-lg"><span className="font-semibold">Assessment:</span> Complete an initial assessment to determine the student's current level.</li>
+                <li className="text-lg"><span className="font-semibold">Personalized Learning Path:</span> Receive a customized curriculum based on the assessment results.</li>
+                <li className="text-lg"><span className="font-semibold">Interactive Lessons:</span> Engage with multimedia content and adaptive exercises.</li>
+                <li className="text-lg"><span className="font-semibold">Progress Tracking:</span> Monitor improvement through real-time analytics and reports.</li>
+                <li className="text-lg"><span className="font-semibold">Continuous Adaptation:</span> The platform adjusts difficulty and content based on performance.</li>
+              </ol>
+            </div>
+          </div>
+        </section>
 
         <section className="py-16 bg-gray-100">
           <div className="container mx-auto px-4">
@@ -80,6 +123,52 @@ const ProductOffering = () => {
                   </DialogContent>
                 </Dialog>
               ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="py-16 bg-white">
+          <div className="container mx-auto px-4">
+            <h2 className="text-3xl font-bold text-center text-purple-800 mb-8">Pricing Plans</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <Card className="hover:shadow-lg transition-shadow">
+                <CardContent className="p-6">
+                  <h3 className="text-2xl font-semibold mb-4">Basic</h3>
+                  <p className="text-3xl font-bold mb-6">$9.99<span className="text-sm font-normal">/month</span></p>
+                  <ul className="space-y-2 mb-6">
+                    <li>Access to core curriculum</li>
+                    <li>Basic progress tracking</li>
+                    <li>Limited interactive lessons</li>
+                  </ul>
+                  <button className="w-full bg-purple-600 text-white py-2 rounded hover:bg-purple-700 transition-colors">Choose Plan</button>
+                </CardContent>
+              </Card>
+              <Card className="hover:shadow-lg transition-shadow border-purple-500 border-2">
+                <CardContent className="p-6">
+                  <h3 className="text-2xl font-semibold mb-4">Pro</h3>
+                  <p className="text-3xl font-bold mb-6">$19.99<span className="text-sm font-normal">/month</span></p>
+                  <ul className="space-y-2 mb-6">
+                    <li>Full curriculum access</li>
+                    <li>Advanced progress tracking</li>
+                    <li>Unlimited interactive lessons</li>
+                    <li>AI-powered recommendations</li>
+                  </ul>
+                  <button className="w-full bg-purple-600 text-white py-2 rounded hover:bg-purple-700 transition-colors">Choose Plan</button>
+                </CardContent>
+              </Card>
+              <Card className="hover:shadow-lg transition-shadow">
+                <CardContent className="p-6">
+                  <h3 className="text-2xl font-semibold mb-4">Enterprise</h3>
+                  <p className="text-3xl font-bold mb-6">Custom</p>
+                  <ul className="space-y-2 mb-6">
+                    <li>All Pro features</li>
+                    <li>Custom integration</li>
+                    <li>Dedicated support</li>
+                    <li>Bulk licensing</li>
+                  </ul>
+                  <button className="w-full bg-purple-600 text-white py-2 rounded hover:bg-purple-700 transition-colors">Contact Us</button>
+                </CardContent>
+              </Card>
             </div>
           </div>
         </section>
