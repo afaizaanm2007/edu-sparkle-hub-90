@@ -76,9 +76,15 @@ const ProductOffering = () => {
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold text-center text-purple-800 mb-8">MVP Demo</h2>
             <p className="text-center text-lg mb-8">Experience a preview of Boomerang Learning's capabilities with our Minimum Viable Product demonstration.</p>
-            {/* Add your MVP demo content here */}
-            <div className="bg-gray-200 h-64 flex items-center justify-center">
-              <p className="text-xl font-semibold">MVP Demo Placeholder</p>
+            <div className="aspect-w-16 aspect-h-9 max-w-3xl mx-auto">
+              <iframe
+                className="w-full h-full"
+                src="https://www.youtube.com/embed/Qno6Dw-u4RI"
+                title="Boomerang Learning MVP Demo"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
             </div>
           </div>
         </section>
@@ -87,7 +93,6 @@ const ProductOffering = () => {
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold text-center text-purple-800 mb-8">UI Gallery</h2>
             <p className="text-center text-lg mb-8">Explore the intuitive and engaging user interface of Boomerang Learning.</p>
-            {/* Add your UI gallery content here */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[1, 2, 3].map((item) => (
                 <div key={item} className="bg-white p-4 rounded-lg shadow">
