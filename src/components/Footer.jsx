@@ -41,11 +41,11 @@ const Footer = () => {
           </div>
         </div>
         <div className="mt-8 text-center text-sm">
-          <p>Boomerang Learning</p>
+          <p>Boomerang Learning LLC</p>
           <p>3466 Pineridge Drive, Newburgh, IN 47630</p>
         </div>
         <div className="mt-4 text-center text-sm">
-          <p>&copy; 2024 Boomerang Learning. All rights reserved.</p>
+          <p>&copy; 2024 Boomerang Learning LLC. All rights reserved.</p>
         </div>
       </div>
     </footer>
