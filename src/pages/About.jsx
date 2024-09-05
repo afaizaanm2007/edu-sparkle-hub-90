@@ -39,8 +39,8 @@ const About = () => {
       name: "Kris Lau",
       role: "CEO",
       description: "Kris Lau is an ambitious learner. He runs a community service initiative providing student-led tutoring at the YMCA. He believes that quality education should be equally accessible to everyone.",
-      linkedinUrl: "#",
-      instagramUrl: "#",
+      linkedinUrl: "https://www.linkedin.com/in/kris-lau-b5b1b5237/",
+      instagramUrl: "https://www.instagram.com/krislau_/",
       imageSrc: "/kris-lau.jpg"
     },
     {
