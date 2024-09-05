@@ -13,35 +13,6 @@ const About = () => {
           Boomerang operates across 4 time zones, with passionate professionals from coast to coast in the US as well as overseas. Made up of passionate and talented professionals, we are democratizing learning by creating a platform for students, made by students.
         </p>
 
-        <Card className="mb-8">
-          <CardContent className="prose max-w-none p-6">
-            <h2 className="text-2xl font-semibold mb-4">Our Mission</h2>
-            <p>
-              At Boomerang Learning, we're on a mission to revolutionize education through innovative technology. 
-              We believe that quality education should be accessible to everyone, everywhere. 
-              Our cutting-edge tools and platforms are designed to empower both students and educators, 
-              creating a more engaging and effective learning experience.
-            </p>
-          </CardContent>
-        </Card>
-
-        <Card className="mb-8">
-          <CardContent className="prose max-w-none p-6">
-            <h2 className="text-2xl font-semibold mb-4">Our Team</h2>
-            <p>
-              Our diverse team of educators, technologists, and innovators are passionate about 
-              transforming the way we learn. With decades of combined experience in education and 
-              technology, we're uniquely positioned to address the challenges facing modern education.
-            </p>
-            <ul className="list-disc pl-6 mt-4">
-              <li>Dr. Sarah Johnson - Founder & CEO (Former educator with 15 years of experience)</li>
-              <li>Mike Chen - Chief Technology Officer (AI and machine learning expert)</li>
-              <li>Emily Rodriguez - Head of Curriculum Development (Specializes in adaptive learning)</li>
-              <li>David Patel - UX/UI Designer (Focused on creating intuitive educational interfaces)</li>
-            </ul>
-          </CardContent>
-        </Card>
-
         <Card>
           <CardContent className="prose max-w-none p-6">
             <h2 className="text-2xl font-semibold mb-4">Our Values</h2>
