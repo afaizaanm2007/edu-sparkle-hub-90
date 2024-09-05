@@ -10,42 +10,42 @@ const ProductOffering = () => {
 
   const uiGalleryItems = [
     {
-      image: "/ui-gallery-1.jpg",
+      image: "/14436d_32441f13f6ed4c819bfcf1eedadf95dc~mv2.jpg",
       title: "Educator Dashboard",
       description: "Comprehensive view of student progress and active lessons for educators."
     },
     {
-      image: "/ui-gallery-2.jpg",
+      image: "/14436d_342ddc3149b243089b8a417a492e7d89~mv2 (1).jpg",
       title: "Parent View - Standards Progress",
       description: "Detailed breakdown of a student's progress in various math standards for parents."
     },
     {
-      image: "/ui-gallery-3.jpg",
+      image: "/14436d_48bc8894ce0941678d2e810be59ce45b~mv2.jpg",
       title: "Educator Classroom View",
       description: "Overview of active lessons and assignments for educators, with recommended activities."
     },
     {
-      image: "/ui-gallery-4.jpg",
+      image: "/14436d_5c98adedc81247f6b1b4d82b3974ca19~mv2 (1).jpg",
       title: "Parent Standards Overview",
       description: "Visual representation of math concepts and related standards for parents."
     },
     {
-      image: "/ui-gallery-5.jpg",
+      image: "/14436d_5b1a323423d94b1796a9a7ea3808f589~mv2.jpg",
       title: "Interactive Math Question",
       description: "Engaging, visual math problem with multiple-choice answers for students."
     },
     {
-      image: "/ui-gallery-6.jpg",
+      image: "/14436d_f65865d8c00b41909727aedc1c60e059~mv2.jpg",
       title: "Reading Comprehension Exercise",
       description: "Interactive reading passage with comprehension questions for students."
     },
     {
-      image: "/ui-gallery-7.jpg",
+      image: "/14436d_7c01e9285a6a4689b01b693a1c3e3e62~mv2.jpg",
       title: "Long Division Tutorial",
       description: "Step-by-step guide for long division problems with AI assistance."
     },
     {
-      image: "/ui-gallery-8.jpg",
+      image: "/14436d_c4fef9a43a6c4271b07099a6c38d5375~mv2.jpg",
       title: "Time Problem Solution",
       description: "Visual explanation of a time-based math problem with multiple-choice answers."
     }
@@ -159,6 +159,35 @@ const ProductOffering = () => {
                   </DialogContent>
                 </Dialog>
               ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="py-16 bg-white">
+          <div className="container mx-auto px-4">
+            <h2 className="text-4xl font-bold text-center text-purple-800 mb-8">Boomerang Learning: Empowering Education</h2>
+            <div className="max-w-4xl mx-auto space-y-6 text-lg">
+              <p>
+                Boomerang Learning is an <span className="text-purple-600 font-semibold">innovative educational platform</span> designed to revolutionize the way students learn and teachers teach. Our mission is to provide a <span className="text-purple-600 font-semibold">comprehensive, personalized learning experience</span> that adapts to each student's unique needs and learning style.
+              </p>
+              <p>
+                At the heart of Boomerang Learning is our <span className="text-purple-600 font-semibold">advanced AI technology</span>, which generates tailored questions and assignments based on individual student performance and state curriculum standards. This ensures that each student is consistently <span className="text-purple-600 font-semibold">challenged at the right level</span>, promoting optimal learning and growth.
+              </p>
+              <p>
+                For teachers, Boomerang Learning offers <span className="text-purple-600 font-semibold">powerful tools</span> to streamline lesson planning, assessment, and progress tracking. Our platform provides <span className="text-purple-600 font-semibold">real-time insights</span> into student performance, allowing educators to identify areas where additional support may be needed and to tailor their instruction accordingly.
+              </p>
+              <p>
+                Parents also benefit from Boomerang Learning's <span className="text-purple-600 font-semibold">comprehensive approach</span>. Through our user-friendly interface, parents can easily <span className="text-purple-600 font-semibold">monitor their child's progress</span>, understand their strengths and areas for improvement, and access resources to support learning at home.
+              </p>
+              <p>
+                Our curriculum covers <span className="text-purple-600 font-semibold">core subjects</span> such as Mathematics and English Language Arts, with plans to expand to other subjects in the future. Each subject area is carefully <span className="text-purple-600 font-semibold">aligned with state standards</span> to ensure that students are well-prepared for standardized tests and future academic challenges.
+              </p>
+              <p>
+                Boomerang Learning isn't just about academics – we've incorporated <span className="text-purple-600 font-semibold">gamification elements</span> to make learning fun and engaging. Students can earn rewards, compete in challenges, and track their own progress, fostering a <span className="text-purple-600 font-semibold">love for learning</span> that extends beyond the classroom.
+              </p>
+              <p>
+                With Boomerang Learning, we're not just teaching – we're <span className="text-purple-600 font-semibold">transforming education</span>. Join us in our mission to empower students, support teachers, and involve parents in the learning journey like never before.
+              </p>
             </div>
           </div>
         </section>
