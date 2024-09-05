@@ -11,7 +11,7 @@ const AboutHero = () => (
     >
       <h1 className="text-4xl font-bold mb-6 text-center text-[#004aad]">About Us</h1>
       <p className="text-lg mb-8 text-center max-w-3xl mx-auto text-gray-700">
-        Boomerang operates across 4 time zones, with passionate professionals from coast to coast in the US as well as overseas. Made up of passionate and talented professionals, we are democratizing learning by creating a platform for students, made by students.
+        Boomerang operates across <strong>4 time zones</strong>, with passionate professionals from <strong>coast to coast in the US as well as overseas</strong>. Made up of <strong>passionate and talented professionals</strong>, we are <strong>democratizing learning</strong> by creating a platform for students, <strong>made by students</strong>.
       </p>
     </motion.div>
   </section>

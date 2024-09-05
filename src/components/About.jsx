@@ -7,11 +7,11 @@ const About = () => {
         <h2 className="text-3xl font-bold text-center mb-8">About EduTech</h2>
         <div className="max-w-3xl mx-auto text-center">
           <p className="text-lg mb-6">
-            EduTech is a cutting-edge educational technology startup dedicated to transforming the learning experience. 
-            We combine the latest in AI and educational research to create powerful, intuitive tools for students and educators alike.
+            EduTech is a <strong>cutting-edge educational technology startup</strong> dedicated to transforming the learning experience. 
+            We combine the latest in <strong>AI and educational research</strong> to create powerful, intuitive tools for students and educators alike.
           </p>
           <p className="text-lg">
-            Our mission is to make quality education accessible to everyone, everywhere. 
+            Our mission is to make <strong>quality education accessible to everyone, everywhere</strong>. 
             By leveraging technology, we're breaking down barriers and opening up new possibilities in learning.
           </p>
         </div>

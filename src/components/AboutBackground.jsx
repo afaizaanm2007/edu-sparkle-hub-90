@@ -13,10 +13,10 @@ const AboutBackground = () => (
         >
           <h2 className="text-2xl font-bold mb-6 text-[#004aad]">Background</h2>
           <p className="text-gray-700 mb-4">
-            Boomerang Learning was founded with a vision to revolutionize the educational landscape by leveraging technology to create a personalized and adaptive learning experience. We saw how difficult it was to understand a student's learning abilities, and easily access this. Which is why we have created Boomerang.
+            Boomerang Learning was founded with a vision to <strong>revolutionize the educational landscape</strong> by leveraging technology to create a <strong>personalized and adaptive learning experience</strong>. We saw how difficult it was to understand a student's learning abilities, and easily access this. Which is why we have created Boomerang.
           </p>
           <p className="text-gray-700">
-            In a rapidly evolving educational environment, Boomerang Learning aims to help students seeking effective learning solutions, parents actively involved in their children's education, and teachers dedicated to personalized instruction. We hope to change the lives of students, engaging them in learning and sparking curiosity.
+            In a rapidly evolving educational environment, Boomerang Learning aims to help <strong>students seeking effective learning solutions</strong>, <strong>parents actively involved in their children's education</strong>, and <strong>teachers dedicated to personalized instruction</strong>. We hope to change the lives of students, engaging them in learning and sparking curiosity.
           </p>
         </motion.div>
         <motion.div
@@ -27,7 +27,7 @@ const AboutBackground = () => (
         >
           <h2 className="text-2xl font-bold mb-6 text-[#c30083]">Our Mission</h2>
           <p className="text-gray-700">
-            We are dedicated to shaping education for individual needs, and equipping students, parents, and teachers with tools that promote academic success. Boomerang Learning is committed to cultivating a dynamic and supportive learning community that keeps everybody in the loop to ensure student proficiency.
+            We are dedicated to <strong>shaping education for individual needs</strong>, and equipping students, parents, and teachers with tools that promote <strong>academic success</strong>. Boomerang Learning is committed to cultivating a <strong>dynamic and supportive learning community</strong> that keeps everybody in the loop to ensure <strong>student proficiency</strong>.
           </p>
         </motion.div>
       </div>

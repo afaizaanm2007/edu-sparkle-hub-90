@@ -11,7 +11,7 @@ const About = () => {
     {
       name: "Kris Lau",
       role: "CEO",
-      description: "Kris Lau is an ambitious learner. He runs a community service initiative providing student-led tutoring at the YMCA. He believes that quality education should be equally accessible to everyone.",
+      description: "Kris Lau is an <strong>ambitious learner</strong>. He runs a community service initiative providing <strong>student-led tutoring</strong> at the YMCA. He believes that <strong>quality education should be equally accessible to everyone</strong>.",
       linkedinUrl: "https://www.linkedin.com/mwlite/profile/in/kris-lau-542680261?trk=recent-searches",
       instagramUrl: "https://www.instagram.com/krislau101?igsh=MXN4dXdiZHBwYXpqdQ==",
       imageSrc: "/krispic.jpg"
@@ -19,7 +19,7 @@ const About = () => {
     {
       name: "Abdul-Aleem Mohammed",
       role: "CSO",
-      description: "Abdul-Aleem Mohammed is a natural leader with an inclination for hard work.",
+      description: "Abdul-Aleem Mohammed is a <strong>natural leader</strong> with an inclination for <strong>hard work</strong>.",
       linkedinUrl: "https://www.linkedin.com/mwlite/profile/in/abdul-aleem-mohammed-67671a2b0?trk=blended-typeahead",
       instagramUrl: "https://www.instagram.com/a_faizaan_mo?igsh=anZraHBqeDFvaXpp&utm_source=qr",
       imageSrc: "/mepic.jpg"
@@ -27,7 +27,7 @@ const About = () => {
     {
       name: "Parth Patel",
       role: "CFO",
-      description: "Parth Patel has an eye for detail, which allows him to plan and execute long-term action.",
+      description: "Parth Patel has an <strong>eye for detail</strong>, which allows him to <strong>plan and execute long-term action</strong>.",
       linkedinUrl: "#",
       instagramUrl: "https://www.instagram.com/notparthpatel?igsh=MTdhbTVkYTFxNWNmNw==",
       imageSrc: "/parthpic.jpg"
@@ -38,7 +38,7 @@ const About = () => {
     {
       name: "Noah Boyd",
       role: "Lead Web Developer",
-      description: "Noah Boyd leads the web development efforts at Boomerang Learning.",
+      description: "Noah Boyd <strong>leads the web development efforts</strong> at Boomerang Learning.",
       linkedinUrl: "#",
       instagramUrl: "#",
       imageSrc: "/placeholder.svg"
@@ -46,7 +46,7 @@ const About = () => {
     {
       name: "Johnathan Baker",
       role: "Development Partner",
-      description: "Johnathan Baker contributes to the development of Boomerang Learning's platform.",
+      description: "Johnathan Baker contributes to the <strong>development of Boomerang Learning's platform</strong>.",
       linkedinUrl: "#",
       instagramUrl: "#",
       imageSrc: "/placeholder.svg"
@@ -54,7 +54,7 @@ const About = () => {
     {
       name: "David Clutter",
       role: "Development Partner",
-      description: "David Clutter plays a key role in developing Boomerang Learning's solutions.",
+      description: "David Clutter plays a <strong>key role in developing Boomerang Learning's solutions</strong>.",
       linkedinUrl: "#",
       instagramUrl: "#",
       imageSrc: "/placeholder.svg"
@@ -62,7 +62,7 @@ const About = () => {
     {
       name: "Arnav Bhute",
       role: "Development Partner",
-      description: "Arnav Bhute contributes his expertise to Boomerang Learning's development team.",
+      description: "Arnav Bhute contributes his <strong>expertise to Boomerang Learning's development team</strong>.",
       linkedinUrl: "#",
       instagramUrl: "#",
       imageSrc: "/placeholder.svg"
