@@ -39,7 +39,7 @@ const About = () => {
       name: "Kris Lau",
       role: "CEO",
       description: "Kris Lau is an ambitious learner. He runs a community service initiative providing student-led tutoring at the YMCA. He believes that quality education should be equally accessible to everyone.",
-      linkedinUrl: "https://www.linkedin.com/in/kris-lau-b5b1b5237/",
+      linkedinUrl: "https://www.linkedin.com/mwlite/profile/in/kris-lau-542680261?trk=recent-searches",
       instagramUrl: "https://www.instagram.com/krislau_/",
       imageSrc: "/kris-lau.jpg"
     },
@@ -47,7 +47,7 @@ const About = () => {
       name: "Abdul-Aleem Mohammed",
       role: "CSO",
       description: "Abdul-Aleem Mohammed is a natural leader with an inclination for hard work.",
-      linkedinUrl: "#",
+      linkedinUrl: "https://www.linkedin.com/mwlite/profile/in/abdul-aleem-mohammed-67671a2b0?trk=blended-typeahead",
       instagramUrl: "#",
       imageSrc: "/abdul-aleem-mohammed.jpg"
     },
