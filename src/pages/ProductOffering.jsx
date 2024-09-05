@@ -76,7 +76,7 @@ const ProductOffering = () => {
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold text-center text-purple-800 mb-8">MVP Demo</h2>
             <p className="text-center text-lg mb-8">Experience a preview of Boomerang Learning's capabilities with our Minimum Viable Product demonstration.</p>
-            <div className="aspect-w-16 aspect-h-9 max-w-3xl mx-auto">
+            <div className="aspect-w-16 aspect-h-9 max-w-4xl mx-auto">
               <iframe
                 className="w-full h-full"
                 src="https://www.youtube.com/embed/Qno6Dw-u4RI"
@@ -103,54 +103,6 @@ const ProductOffering = () => {
                 </div>
               ))}
             </div>
-          </div>
-        </section>
-
-        <section className="py-16 bg-white">
-          <div className="container mx-auto px-4">
-            <h2 className="text-4xl font-bold text-center text-purple-800 mb-8">Boomerang Learning: Empowering Education</h2>
-            <div className="max-w-4xl mx-auto space-y-6 text-lg">
-              <p>
-                Boomerang Learning is an <span className="text-purple-600 font-semibold">innovative educational platform</span> designed to revolutionize the way students learn and teachers teach.
-                Our mission is to provide a <span className="text-purple-600 font-semibold">comprehensive, personalized learning experience</span> that adapts to each student's unique needs and
-                learning style.
-              </p>
-              <p>
-                At the heart of Boomerang Learning is our <span className="text-purple-600 font-semibold">advanced AI technology</span>, which generates tailored questions and assignments based
-                on individual student performance and state curriculum standards. This ensures that each student is consistently <span className="text-purple-600 font-semibold">challenged at
-                the right level</span>, promoting optimal learning and growth.
-              </p>
-              <p>
-                For teachers, Boomerang Learning offers <span className="text-purple-600 font-semibold">powerful tools</span> to streamline lesson planning, assessment, and progress tracking. Our
-                platform provides <span className="text-purple-600 font-semibold">real-time insights</span> into student performance, allowing educators to identify areas where additional support may
-                be needed and to tailor their instruction accordingly.
-              </p>
-              <p>
-                Parents also benefit from Boomerang Learning's <span className="text-purple-600 font-semibold">comprehensive approach</span>. Through our user-friendly interface, parents can
-                easily <span className="text-purple-600 font-semibold">monitor their child's progress</span>, understand their strengths and areas for improvement, and access resources to support
-                learning at home.
-              </p>
-              <p>
-                Our curriculum covers <span className="text-purple-600 font-semibold">core subjects</span> such as Mathematics and English Language Arts, with plans to expand to other subjects in
-                the future. Each subject area is carefully <span className="text-purple-600 font-semibold">aligned with state standards</span> to ensure that students are well-prepared for standardized
-                tests and future academic challenges.
-              </p>
-              <p>
-                Boomerang Learning isn't just about academics – we've incorporated <span className="text-purple-600 font-semibold">gamification elements</span> to make learning fun and engaging.
-                Students can earn rewards, compete in challenges, and track their own progress, fostering a <span className="text-purple-600 font-semibold">love for learning</span> that extends beyond
-                the classroom.
-              </p>
-              <p>
-                With Boomerang Learning, we're not just teaching – we're <span className="text-purple-600 font-semibold">transforming education</span>. Join us in our mission to empower students,
-                support teachers, and involve parents in the learning journey like never before.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <section className="py-16 bg-purple-100">
-          <div className="container mx-auto px-4">
-            <h2 className="text-5xl font-bold text-center text-purple-800 mb-8">Boomerang Learning: Returning Kids to their full potential</h2>
           </div>
         </section>
       </main>
