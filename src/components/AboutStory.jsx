@@ -17,16 +17,16 @@ const AboutStory = () => (
             Our journey began in <strong>October 2023</strong> with the inception of Boomerang Learning. As volunteer tutors at a local YMCA in the <strong>Evansville Promise Zone</strong>, we encountered a significant challenge: many students were falling behind state learning standards. Despite our best efforts, it was difficult to address the diverse learning needs of numerous students in our limited time.
           </p>
           <p>
-            The lack of continuity between different volunteer tutors and the absence of a centralized system to track student progress became apparent. This realization sparked the idea for Boomerang Learning—a <strong>hub of learning information</strong> for both <strong>students and those who support them</strong>.
+            The lack of continuity between different volunteer tutors and the absence of a centralized system to track student progress became apparent. This realization sparked the idea for Boomerang Learning—a <strong><span className="text-[#004aad]">hub of learning information</span></strong> for both <strong>students and those who support them</strong>.
           </p>
           <p>
-            We envisioned Boomerang as a solution that harnesses <strong>AI and technology</strong> to tackle these educational challenges. By generating questions based on state curricula, we aim to create a <strong>comprehensive database</strong> for students to practice anytime, anywhere—not just within classroom confines.
+            We envisioned Boomerang as a solution that harnesses <strong><span className="text-[#c30083]">AI and technology</span></strong> to tackle these educational challenges. By generating questions based on state curricula, we aim to create a <strong>comprehensive database</strong> for students to practice anytime, anywhere—not just within classroom confines.
           </p>
           <p>
             Our platform utilizes <strong>AI and analytics</strong> to monitor student progress and proficiency across various learning standards. This ensures that teachers, afterschool programs, and parents remain informed about each student's educational journey, allowing for <strong>targeted support</strong> both within and outside our app.
           </p>
           <p>
-            Boomerang Learning's potential was recognized at the <strong>U.E. Changemaker Challenge</strong>, where we secured over <strong>$200,000 in renewable scholarships</strong>. We're deeply involved with our local community, schools, and tutoring centers to expand Boomerang's reach. Currently, we're seeking <strong>seed funding</strong> to develop our app and realize our vision of nationwide implementation in schools.
+            Boomerang Learning's potential was recognized at the <strong>U.E. Changemaker Challenge</strong>, where we secured over <strong><span className="text-[#004aad]">$200,000 in renewable scholarships</span></strong>. We're deeply involved with our local community, schools, and tutoring centers to expand Boomerang's reach. Currently, we're seeking <strong>seed funding</strong> to develop our app and realize our vision of nationwide implementation in schools.
           </p>
         </div>
         <div className="mt-8 bg-white p-6 rounded-lg">
