@@ -7,11 +7,13 @@ import { Instagram, Linkedin } from 'lucide-react';
 const CoFounderCard = ({ name, role, description, linkedinUrl, instagramUrl, imageSrc }) => (
   <Card className="overflow-hidden">
     <div className="aspect-w-1 aspect-h-1">
-      <img
-        src={imageSrc}
-        alt={name}
-        className="object-cover w-full h-full"
-      />
+      {imageSrc && (
+        <img
+          src={imageSrc}
+          alt={name}
+          className="object-cover w-full h-full"
+        />
+      )}
     </div>
     <CardContent className="p-4">
       <h3 className="text-xl font-bold">{name}</h3>
