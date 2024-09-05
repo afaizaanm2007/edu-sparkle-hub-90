@@ -14,7 +14,7 @@ const uiGalleryItems = [
     description: "Comprehensive view of student progress and active lessons for educators."
   },
   {
-    image: "/14436d_342ddc3149b243089b8a417a492e7d89~mv2.jpg",
+    image: "/14436d_342ddc3149b243089b8a417a492e7d89~mv2 (1).jpg",
     title: "Parent View - Standards Progress",
     description: "Detailed breakdown of a student's progress in various math standards for parents."
   },
@@ -24,7 +24,7 @@ const uiGalleryItems = [
     description: "Overview of active lessons and assignments for educators, with recommended activities."
   },
   {
-    image: "/14436d_5c98adedc81247f6b1b4d82b3974ca19~mv2.jpg",
+    image: "/14436d_5c98adedc81247f6b1b4d82b3974ca19~mv2 (1).jpg",
     title: "Parent Standards Overview",
     description: "Visual representation of math concepts and related standards for parents."
   },
