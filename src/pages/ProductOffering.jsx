@@ -74,6 +74,35 @@ const ProductOffering = () => {
 
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
+            <h2 className="text-3xl font-bold text-center text-purple-800 mb-8">MVP Demo</h2>
+            <p className="text-center text-lg mb-8">Experience a preview of Boomerang Learning's capabilities with our Minimum Viable Product demonstration.</p>
+            {/* Add your MVP demo content here */}
+            <div className="bg-gray-200 h-64 flex items-center justify-center">
+              <p className="text-xl font-semibold">MVP Demo Placeholder</p>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-16 bg-gray-100">
+          <div className="container mx-auto px-4">
+            <h2 className="text-3xl font-bold text-center text-purple-800 mb-8">UI Gallery</h2>
+            <p className="text-center text-lg mb-8">Explore the intuitive and engaging user interface of Boomerang Learning.</p>
+            {/* Add your UI gallery content here */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {[1, 2, 3].map((item) => (
+                <div key={item} className="bg-white p-4 rounded-lg shadow">
+                  <div className="bg-gray-300 h-48 mb-4 flex items-center justify-center">
+                    <p className="text-xl font-semibold">UI Screenshot {item}</p>
+                  </div>
+                  <p className="text-center">Description of UI feature {item}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="py-16 bg-white">
+          <div className="container mx-auto px-4">
             <h2 className="text-4xl font-bold text-center text-purple-800 mb-8">Boomerang Learning: Empowering Education</h2>
             <div className="max-w-4xl mx-auto space-y-6 text-lg">
               <p>
