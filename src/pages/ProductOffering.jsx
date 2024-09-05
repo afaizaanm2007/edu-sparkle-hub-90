@@ -93,13 +93,13 @@ const ProductOffering = () => {
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold text-center text-purple-800 mb-8">UI Gallery</h2>
             <p className="text-center text-lg mb-8">Explore the intuitive and engaging user interface of Boomerang Learning.</p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {[1, 2, 3].map((item) => (
-                <div key={item} className="bg-white p-4 rounded-lg shadow">
-                  <div className="bg-gray-300 h-48 mb-4 flex items-center justify-center">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+              {[1, 2, 3, 4, 5, 6, 7, 8].map((item) => (
+                <div key={item} className="bg-white p-4 rounded-lg shadow-md transition-transform hover:scale-105">
+                  <div className="bg-gray-300 h-48 mb-4 flex items-center justify-center rounded">
                     <p className="text-xl font-semibold">UI Screenshot {item}</p>
                   </div>
-                  <p className="text-center">Description of UI feature {item}</p>
+                  <p className="text-center text-sm">Description of UI feature {item}</p>
                 </div>
               ))}
             </div>
