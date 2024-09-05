@@ -72,10 +72,28 @@ const About = () => {
         </p>
 
         <h2 className="text-3xl font-bold mb-6 text-center">Co-founders</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           {coFounders.map((founder, index) => (
             <CoFounderCard key={index} {...founder} />
           ))}
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+          <div>
+            <h2 className="text-2xl font-bold mb-4">Background</h2>
+            <p className="text-lg">
+              Boomerang Learning was founded with a vision to revolutionize the educational landscape by leveraging technology to create a personalized and adaptive learning experience. We saw how difficult it was to understand a student's learning abilities, and easily access this. Which is why we have created Boomerang.
+            </p>
+            <p className="text-lg mt-4">
+              In a rapidly evolving educational environment, Boomerang Learning aims to help students seeking effective learning solutions, parents actively involved in their children's education, and teachers dedicated to personalized instruction. We hope to change the lives of students, engaging them in learning and sparking curiosity.
+            </p>
+          </div>
+          <div>
+            <h2 className="text-2xl font-bold mb-4">Our Mission</h2>
+            <p className="text-lg">
+              We are dedicated to shaping education for individual needs, and equipping students, parents, and teachers with tools that promote academic success. Boomerang Learning is committed to cultivating a dynamic and supportive learning community that keeps everybody in the loop to ensure student proficiency.
+            </p>
+          </div>
         </div>
       </main>
       <Footer />
