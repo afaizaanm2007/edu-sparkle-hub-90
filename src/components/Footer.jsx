@@ -17,15 +17,12 @@ const Footer = () => {
           </div>
           <div>
             <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
-            <p>Boomerang Learning LLC</p>
-            <p>3466 Pineridge Drive</p>
-            <p>Newburgh, IN 47630</p>
-            <div className="mt-4">
+            <div className="space-y-2">
               <a href="mailto:info@boomeranglearning.com" className="flex items-center hover:text-blue-400">
                 <Mail className="w-4 h-4 mr-2" />
                 info@boomeranglearning.com
               </a>
-              <a href="mailto:boomeranglearning1@gmail.com" className="flex items-center hover:text-blue-400 mt-2">
+              <a href="mailto:boomeranglearning1@gmail.com" className="flex items-center hover:text-blue-400">
                 <Mail className="w-4 h-4 mr-2" />
                 boomeranglearning1@gmail.com
               </a>
@@ -43,7 +40,11 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="mt-8 text-center">
+        <div className="mt-8 text-center text-sm">
+          <p>Boomerang Learning LLC</p>
+          <p>3466 Pineridge Drive, Newburgh, IN 47630</p>
+        </div>
+        <div className="mt-4 text-center text-sm">
           <p>&copy; 2024 Boomerang Learning LLC. All rights reserved.</p>
         </div>
       </div>
