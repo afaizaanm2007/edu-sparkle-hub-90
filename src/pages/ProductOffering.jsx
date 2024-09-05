@@ -1,57 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { Card, CardContent } from "@/components/ui/card";
-import { Zap, Monitor, BarChart2, Users, BookOpen } from 'lucide-react';
-import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { motion } from "framer-motion";
+import ProductFeatures from '../components/ProductFeatures';
+import UIGallery from '../components/UIGallery';
 
 const ProductOffering = () => {
-  const [selectedImage, setSelectedImage] = useState(null);
-
-  const uiGalleryItems = [
-    {
-      image: "/14436d_32441f13f6ed4c819bfcf1eedadf95dc~mv2.jpg",
-      title: "Educator Dashboard",
-      description: "Comprehensive view of student progress and active lessons for educators."
-    },
-    {
-      image: "/14436d_342ddc3149b243089b8a417a492e7d89~mv2 (1).jpg",
-      title: "Parent View - Standards Progress",
-      description: "Detailed breakdown of a student's progress in various math standards for parents."
-    },
-    {
-      image: "/14436d_48bc8894ce0941678d2e810be59ce45b~mv2.jpg",
-      title: "Educator Classroom View",
-      description: "Overview of active lessons and assignments for educators, with recommended activities."
-    },
-    {
-      image: "/14436d_5c98adedc81247f6b1b4d82b3974ca19~mv2 (1).jpg",
-      title: "Parent Standards Overview",
-      description: "Visual representation of math concepts and related standards for parents."
-    },
-    {
-      image: "/14436d_5b1a323423d94b1796a9a7ea3808f589~mv2.jpg",
-      title: "Interactive Math Question",
-      description: "Engaging, visual math problem with multiple-choice answers for students."
-    },
-    {
-      image: "/14436d_f65865d8c00b41909727aedc1c60e059~mv2.jpg",
-      title: "Reading Comprehension Exercise",
-      description: "Interactive reading passage with comprehension questions for students."
-    },
-    {
-      image: "/14436d_7c01e9285a6a4689b01b693a1c3e3e62~mv2.jpg",
-      title: "Long Division Tutorial",
-      description: "Step-by-step guide for long division problems with AI assistance."
-    },
-    {
-      image: "/14436d_c4fef9a43a6c4271b07099a6c38d5375~mv2.jpg",
-      title: "Time Problem Solution",
-      description: "Visual explanation of a time-based math problem with multiple-choice answers."
-    }
-  ];
-
   const fadeInUpVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
@@ -113,40 +68,7 @@ const ProductOffering = () => {
           </div>
         </motion.section>
 
-        <motion.section 
-          className="py-16"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          variants={fadeInUpVariants}
-        >
-          <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold text-center text-purple-800 mb-12">Key Features</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {[
-                { icon: <Zap className="text-yellow-500" size={24} />, text: "Personalized learning paths" },
-                { icon: <Monitor className="text-blue-500" size={24} />, text: "AI-powered question generation" },
-                { icon: <BarChart2 className="text-green-500" size={24} />, text: "Real-time progress tracking" },
-                { icon: <Users className="text-purple-500" size={24} />, text: "Interactive quizzes and games" },
-                { icon: <BarChart2 className="text-red-500" size={24} />, text: "Comprehensive analytics for parents and teachers" },
-                { icon: <BookOpen className="text-green-500" size={24} />, text: "Alignment with state curriculum standards" }
-              ].map((feature, index) => (
-                <motion.div
-                  key={index}
-                  variants={fadeInUpVariants}
-                  custom={index}
-                >
-                  <Card className="bg-white shadow-sm">
-                    <CardContent className="p-4 flex items-center">
-                      {feature.icon}
-                      <span className="ml-4 text-lg">{feature.text}</span>
-                    </CardContent>
-                  </Card>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </motion.section>
+        <ProductFeatures />
 
         <motion.section 
           className="py-24 bg-white"
@@ -171,45 +93,7 @@ const ProductOffering = () => {
           </div>
         </motion.section>
 
-        <motion.section 
-          className="py-16 bg-gray-100"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          variants={fadeInUpVariants}
-        >
-          <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold text-center text-purple-800 mb-8">UI Gallery</h2>
-            <p className="text-center text-lg mb-8">Explore the intuitive and engaging user interface of Boomerang Learning.</p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-              {uiGalleryItems.map((item, index) => (
-                <motion.div
-                  key={index}
-                  variants={fadeInUpVariants}
-                  custom={index}
-                >
-                  <Dialog>
-                    <DialogTrigger>
-                      <div className="bg-white p-4 rounded-lg shadow-md transition-transform hover:scale-105 cursor-pointer">
-                        <div className="bg-gray-300 h-48 mb-4 flex items-center justify-center rounded overflow-hidden">
-                          <img src={item.image} alt={item.title} className="w-full h-full object-cover" />
-                        </div>
-                        <p className="text-center text-sm font-semibold">{item.title}</p>
-                      </div>
-                    </DialogTrigger>
-                    <DialogContent className="max-w-3xl">
-                      <div className="bg-gray-300 h-[80vh] flex items-center justify-center rounded overflow-hidden">
-                        <img src={item.image} alt={item.title} className="w-full h-full object-contain" />
-                      </div>
-                      <h3 className="text-xl font-bold mt-4 mb-2">{item.title}</h3>
-                      <p className="text-center">{item.description}</p>
-                    </DialogContent>
-                  </Dialog>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </motion.section>
+        <UIGallery />
 
         <motion.section 
           className="py-16 bg-white"
@@ -232,12 +116,6 @@ const ProductOffering = () => {
               </p>
               <p>
                 Parents also benefit from Boomerang Learning's <span className="text-purple-600 font-semibold">comprehensive approach</span>. Through our user-friendly interface, parents can easily <span className="text-purple-600 font-semibold">monitor their child's progress</span>, understand their strengths and areas for improvement, and access resources to support learning at home.
-              </p>
-              <p>
-                Our curriculum covers <span className="text-purple-600 font-semibold">core subjects</span> such as Mathematics and English Language Arts, with plans to expand to other subjects in the future. Each subject area is carefully <span className="text-purple-600 font-semibold">aligned with state standards</span> to ensure that students are well-prepared for standardized tests and future academic challenges.
-              </p>
-              <p>
-                Boomerang Learning isn't just about academics – we've incorporated <span className="text-purple-600 font-semibold">gamification elements</span> to make learning fun and engaging. Students can earn rewards, compete in challenges, and track their own progress, fostering a <span className="text-purple-600 font-semibold">love for learning</span> that extends beyond the classroom.
               </p>
               <p>
                 With Boomerang Learning, we're not just teaching – we're <span className="text-purple-600 font-semibold">transforming education</span>. Join us in our mission to empower students, support teachers, and involve parents in the learning journey like never before.
