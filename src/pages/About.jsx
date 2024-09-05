@@ -84,23 +84,12 @@ const About = () => {
 
         <section className="py-16 bg-gray-50">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold mb-12 text-center text-[#004aad]">Co-founders</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {coFounders.map((founder, index) => (
-                <CoFounderCard key={index} {...founder} />
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section className="py-16 bg-white">
-          <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
               <motion.div
                 initial={{ opacity: 0, x: -50 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5 }}
-                className="bg-gray-100 p-8 rounded-lg shadow-sm"
+                className="bg-white p-8 rounded-lg shadow-sm"
               >
                 <h2 className="text-2xl font-bold mb-6 text-[#004aad]">Background</h2>
                 <p className="text-gray-700 mb-4">
@@ -114,7 +103,7 @@ const About = () => {
                 initial={{ opacity: 0, x: 50 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5 }}
-                className="bg-gray-100 p-8 rounded-lg shadow-sm"
+                className="bg-white p-8 rounded-lg shadow-sm"
               >
                 <h2 className="text-2xl font-bold mb-6 text-[#c30083]">Our Mission</h2>
                 <p className="text-gray-700">
@@ -125,13 +114,13 @@ const About = () => {
           </div>
         </section>
 
-        <section className="py-16 bg-gray-50">
+        <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="bg-white p-8 rounded-lg shadow-sm"
+              className="bg-gray-50 p-8 rounded-lg shadow-sm"
             >
               <h2 className="text-3xl font-bold mb-8 text-center text-[#004aad]">Our Story</h2>
               <div className="space-y-6 text-gray-700">
@@ -151,13 +140,24 @@ const About = () => {
                   Boomerang Learning's potential was recognized at the U.E. Changemaker Challenge, where we secured over $200,000 in renewable scholarships. We're deeply involved with our local community, schools, and tutoring centers to expand Boomerang's reach. Currently, we're seeking seed funding to develop our app and realize our vision of nationwide implementation in schools.
                 </p>
               </div>
-              <div className="mt-8 bg-gray-100 p-6 rounded-lg">
+              <div className="mt-8 bg-white p-6 rounded-lg">
                 <h3 className="text-xl font-bold mb-4 text-center text-[#004aad]">Boomerang Learning's Core Mission:</h3>
                 <p className="text-lg font-semibold text-center text-[#c30083]">
                   Increase student proficiency by making learning efficient
                 </p>
               </div>
             </motion.div>
+          </div>
+        </section>
+
+        <section className="py-16 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <h2 className="text-3xl font-bold mb-12 text-center text-[#004aad]">Co-founders</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {coFounders.map((founder, index) => (
+                <CoFounderCard key={index} {...founder} />
+              ))}
+            </div>
           </div>
         </section>
       </main>
