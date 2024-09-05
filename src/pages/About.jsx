@@ -5,7 +5,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Instagram, Linkedin } from 'lucide-react';
 import { motion } from "framer-motion";
 
-const CoFounderCard = ({ name, role, description, linkedinUrl, instagramUrl, imageSrc }) => (
+const ProfileCard = ({ name, role, description, linkedinUrl, instagramUrl, imageSrc }) => (
   <motion.div
     initial={{ opacity: 0, y: 20 }}
     animate={{ opacity: 1, y: 0 }}
@@ -26,16 +26,12 @@ const CoFounderCard = ({ name, role, description, linkedinUrl, instagramUrl, ima
         <p className="text-lg font-semibold text-gray-600 mb-2">{role}</p>
         <p className="text-gray-700">{description}</p>
         <div className="mt-4 flex space-x-3">
-          {linkedinUrl && (
-            <a href={linkedinUrl} target="_blank" rel="noopener noreferrer" className="text-[#004aad] hover:text-[#c30083] transition-colors">
-              <Linkedin className="w-5 h-5" />
-            </a>
-          )}
-          {instagramUrl && (
-            <a href={instagramUrl} target="_blank" rel="noopener noreferrer" className="text-[#c30083] hover:text-[#004aad] transition-colors">
-              <Instagram className="w-5 h-5" />
-            </a>
-          )}
+          <a href={linkedinUrl} target="_blank" rel="noopener noreferrer" className="text-[#004aad] hover:text-[#c30083] transition-colors">
+            <Linkedin className="w-5 h-5" />
+          </a>
+          <a href={instagramUrl} target="_blank" rel="noopener noreferrer" className="text-[#c30083] hover:text-[#004aad] transition-colors">
+            <Instagram className="w-5 h-5" />
+          </a>
         </div>
       </CardContent>
     </Card>
@@ -64,8 +60,44 @@ const About = () => {
       name: "Parth Patel",
       role: "CFO",
       description: "Parth Patel has an eye for detail, which allows him to plan and execute long-term action.",
+      linkedinUrl: "#",
       instagramUrl: "https://www.instagram.com/notparthpatel?igsh=MTdhbTVkYTFxNWNmNw==",
       imageSrc: "/parthpic.jpg"
+    }
+  ];
+
+  const teamMembers = [
+    {
+      name: "Team Member 1",
+      role: "Role 1",
+      description: "Description for Team Member 1.",
+      linkedinUrl: "#",
+      instagramUrl: "#",
+      imageSrc: "/placeholder.svg"
+    },
+    {
+      name: "Team Member 2",
+      role: "Role 2",
+      description: "Description for Team Member 2.",
+      linkedinUrl: "#",
+      instagramUrl: "#",
+      imageSrc: "/placeholder.svg"
+    },
+    {
+      name: "Team Member 3",
+      role: "Role 3",
+      description: "Description for Team Member 3.",
+      linkedinUrl: "#",
+      instagramUrl: "#",
+      imageSrc: "/placeholder.svg"
+    },
+    {
+      name: "Team Member 4",
+      role: "Role 4",
+      description: "Description for Team Member 4.",
+      linkedinUrl: "#",
+      instagramUrl: "#",
+      imageSrc: "/placeholder.svg"
     }
   ];
 
@@ -155,7 +187,18 @@ const About = () => {
             <h2 className="text-3xl font-bold mb-12 text-center text-[#004aad]">Co-founders</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {coFounders.map((founder, index) => (
-                <CoFounderCard key={index} {...founder} />
+                <ProfileCard key={index} {...founder} />
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="py-16 bg-white">
+          <div className="container mx-auto px-4">
+            <h2 className="text-3xl font-bold mb-12 text-center text-[#004aad]">Our Team</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {teamMembers.map((member, index) => (
+                <ProfileCard key={index} {...member} />
               ))}
             </div>
           </div>
