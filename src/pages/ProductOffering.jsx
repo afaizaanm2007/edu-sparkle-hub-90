@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { Card, CardContent } from "@/components/ui/card";
 import { Zap, Monitor, BarChart2, Users, CheckCircle, BookOpen } from 'lucide-react';
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 
 const ProductOffering = () => {
+  const [selectedImage, setSelectedImage] = useState(null);
+
   return (
     <div className="min-h-screen flex flex-col bg-gray-50">
       <Header />
@@ -95,12 +98,22 @@ const ProductOffering = () => {
             <p className="text-center text-lg mb-8">Explore the intuitive and engaging user interface of Boomerang Learning.</p>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
               {[1, 2, 3, 4, 5, 6, 7, 8].map((item) => (
-                <div key={item} className="bg-white p-4 rounded-lg shadow-md transition-transform hover:scale-105">
-                  <div className="bg-gray-300 h-48 mb-4 flex items-center justify-center rounded">
-                    <p className="text-xl font-semibold">UI Screenshot {item}</p>
-                  </div>
-                  <p className="text-center text-sm">Description of UI feature {item}</p>
-                </div>
+                <Dialog key={item}>
+                  <DialogTrigger>
+                    <div className="bg-white p-4 rounded-lg shadow-md transition-transform hover:scale-105 cursor-pointer">
+                      <div className="bg-gray-300 h-48 mb-4 flex items-center justify-center rounded">
+                        <p className="text-xl font-semibold">UI Screenshot {item}</p>
+                      </div>
+                      <p className="text-center text-sm">Description of UI feature {item}</p>
+                    </div>
+                  </DialogTrigger>
+                  <DialogContent className="max-w-3xl">
+                    <div className="bg-gray-300 h-[80vh] flex items-center justify-center rounded">
+                      <p className="text-3xl font-semibold">UI Screenshot {item}</p>
+                    </div>
+                    <p className="text-center mt-4">Detailed description of UI feature {item}</p>
+                  </DialogContent>
+                </Dialog>
               ))}
             </div>
           </div>
