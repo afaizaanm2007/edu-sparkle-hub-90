@@ -22,17 +22,17 @@ const CoFounderCard = ({ name, role, description, linkedinUrl, instagramUrl, ima
         )}
       </div>
       <CardContent className="p-6 bg-white">
-        <h3 className="text-2xl font-bold text-blue-600">{name}</h3>
+        <h3 className="text-2xl font-bold text-[#004aad]">{name}</h3>
         <p className="text-lg font-semibold text-gray-600 mb-2">{role}</p>
         <p className="text-gray-700">{description}</p>
         <div className="mt-4 flex space-x-3">
           {linkedinUrl && (
-            <a href={linkedinUrl} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 transition-colors">
+            <a href={linkedinUrl} target="_blank" rel="noopener noreferrer" className="text-[#004aad] hover:text-[#c30083] transition-colors">
               <Linkedin className="w-6 h-6" />
             </a>
           )}
           {instagramUrl && (
-            <a href={instagramUrl} target="_blank" rel="noopener noreferrer" className="text-pink-600 hover:text-pink-800 transition-colors">
+            <a href={instagramUrl} target="_blank" rel="noopener noreferrer" className="text-[#c30083] hover:text-[#004aad] transition-colors">
               <Instagram className="w-6 h-6" />
             </a>
           )}
@@ -73,7 +73,7 @@ const About = () => {
     <div className="min-h-screen flex flex-col bg-gray-50">
       <Header />
       <main className="flex-grow">
-        <section className="bg-blue-600 text-white py-16">
+        <section className="bg-[#004aad] text-white py-16">
           <div className="container mx-auto px-4">
             <h1 className="text-5xl font-bold mb-6 text-center">About Us</h1>
             <p className="text-xl mb-8 text-center max-w-3xl mx-auto">
@@ -82,9 +82,9 @@ const About = () => {
           </div>
         </section>
 
-        <section className="py-16 bg-gray-100">
+        <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
-            <h2 className="text-4xl font-bold mb-12 text-center text-blue-600">Co-founders</h2>
+            <h2 className="text-4xl font-bold mb-12 text-center text-[#004aad]">Co-founders</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
               {coFounders.map((founder, index) => (
                 <CoFounderCard key={index} {...founder} />
@@ -93,20 +93,20 @@ const About = () => {
           </div>
         </section>
 
-        <section className="py-16 bg-white">
+        <section className="py-16 bg-gray-100">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
               <motion.div
                 initial={{ opacity: 0, x: -50 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5 }}
-                className="bg-blue-50 p-8 rounded-lg shadow-md"
+                className="bg-[#004aad] p-8 rounded-lg shadow-md text-white"
               >
-                <h2 className="text-3xl font-bold mb-6 text-blue-600">Background</h2>
-                <p className="text-lg text-gray-700 mb-4">
+                <h2 className="text-3xl font-bold mb-6">Background</h2>
+                <p className="text-lg mb-4">
                   Boomerang Learning was founded with a vision to revolutionize the educational landscape by leveraging technology to create a personalized and adaptive learning experience. We saw how difficult it was to understand a student's learning abilities, and easily access this. Which is why we have created Boomerang.
                 </p>
-                <p className="text-lg text-gray-700">
+                <p className="text-lg">
                   In a rapidly evolving educational environment, Boomerang Learning aims to help students seeking effective learning solutions, parents actively involved in their children's education, and teachers dedicated to personalized instruction. We hope to change the lives of students, engaging them in learning and sparking curiosity.
                 </p>
               </motion.div>
@@ -114,10 +114,10 @@ const About = () => {
                 initial={{ opacity: 0, x: 50 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5 }}
-                className="bg-green-50 p-8 rounded-lg shadow-md"
+                className="bg-[#c30083] p-8 rounded-lg shadow-md text-white"
               >
-                <h2 className="text-3xl font-bold mb-6 text-green-600">Our Mission</h2>
-                <p className="text-lg text-gray-700">
+                <h2 className="text-3xl font-bold mb-6">Our Mission</h2>
+                <p className="text-lg">
                   We are dedicated to shaping education for individual needs, and equipping students, parents, and teachers with tools that promote academic success. Boomerang Learning is committed to cultivating a dynamic and supportive learning community that keeps everybody in the loop to ensure student proficiency.
                 </p>
               </motion.div>
@@ -125,16 +125,16 @@ const About = () => {
           </div>
         </section>
 
-        <section className="py-16 bg-purple-50">
+        <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="bg-white p-8 rounded-lg shadow-md"
+              className="bg-[#004aad] p-8 rounded-lg shadow-md text-white"
             >
-              <h2 className="text-4xl font-bold mb-8 text-purple-600 text-center">Our Story</h2>
-              <div className="space-y-6 text-gray-700">
+              <h2 className="text-4xl font-bold mb-8 text-center">Our Story</h2>
+              <div className="space-y-6">
                 <p>
                   Our journey began in October 2023 with the inception of Boomerang Learning. As volunteer tutors at a local YMCA in the Evansville Promise Zone, we encountered a significant challenge: many students were falling behind state learning standards. Despite our best efforts, it was difficult to address the diverse learning needs of numerous students in our limited time.
                 </p>
@@ -151,9 +151,9 @@ const About = () => {
                   Boomerang Learning's potential was recognized at the U.E. Changemaker Challenge, where we secured over $200,000 in renewable scholarships. We're deeply involved with our local community, schools, and tutoring centers to expand Boomerang's reach. Currently, we're seeking seed funding to develop our app and realize our vision of nationwide implementation in schools.
                 </p>
               </div>
-              <div className="mt-8 bg-purple-100 p-6 rounded-lg">
-                <h3 className="text-2xl font-bold text-purple-600 mb-4 text-center">Boomerang Learning's Core Mission:</h3>
-                <p className="text-xl font-semibold text-center text-purple-800">
+              <div className="mt-8 bg-[#c30083] p-6 rounded-lg">
+                <h3 className="text-2xl font-bold mb-4 text-center">Boomerang Learning's Core Mission:</h3>
+                <p className="text-xl font-semibold text-center">
                   Increase student proficiency by making learning efficient
                 </p>
               </div>
