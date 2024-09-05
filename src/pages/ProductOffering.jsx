@@ -72,11 +72,11 @@ const ProductOffering = () => {
           </div>
         </section>
 
-        <section className="py-16 bg-white">
+        <section className="py-24 bg-white">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold text-center text-purple-800 mb-8">MVP Demo</h2>
-            <p className="text-center text-lg mb-8">Experience a preview of Boomerang Learning's capabilities with our Minimum Viable Product demonstration.</p>
-            <div className="aspect-w-16 aspect-h-9 max-w-4xl mx-auto">
+            <p className="text-center text-lg mb-12">Experience a preview of Boomerang Learning's capabilities with our Minimum Viable Product demonstration.</p>
+            <div className="max-w-5xl mx-auto h-[600px]">
               <iframe
                 className="w-full h-full"
                 src="https://www.youtube.com/embed/Qno6Dw-u4RI"
