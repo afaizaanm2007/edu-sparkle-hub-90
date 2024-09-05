@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Instagram, Linkedin, Mail } from 'lucide-react';
+import { Instagram, Linkedin } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -18,12 +18,10 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
             <div className="space-y-2">
-              <a href="mailto:info@boomeranglearning.com" className="flex items-center hover:text-blue-400">
-                <Mail className="w-4 h-4 mr-2" />
+              <a href="mailto:info@boomeranglearning.com" className="hover:text-blue-400">
                 info@boomeranglearning.com
               </a>
-              <a href="mailto:boomeranglearning1@gmail.com" className="flex items-center hover:text-blue-400">
-                <Mail className="w-4 h-4 mr-2" />
+              <a href="mailto:boomeranglearning1@gmail.com" className="hover:text-blue-400">
                 boomeranglearning1@gmail.com
               </a>
             </div>
