@@ -8,6 +8,49 @@ import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 const ProductOffering = () => {
   const [selectedImage, setSelectedImage] = useState(null);
 
+  const uiGalleryItems = [
+    {
+      image: "/ui-gallery-1.jpg",
+      title: "Educator Dashboard",
+      description: "Comprehensive view of student progress and active lessons for educators."
+    },
+    {
+      image: "/ui-gallery-2.jpg",
+      title: "Parent View - Standards Progress",
+      description: "Detailed breakdown of a student's progress in various math standards for parents."
+    },
+    {
+      image: "/ui-gallery-3.jpg",
+      title: "Educator Classroom View",
+      description: "Overview of active lessons and assignments for educators, with recommended activities."
+    },
+    {
+      image: "/ui-gallery-4.jpg",
+      title: "Parent Standards Overview",
+      description: "Visual representation of math concepts and related standards for parents."
+    },
+    {
+      image: "/ui-gallery-5.jpg",
+      title: "Interactive Math Question",
+      description: "Engaging, visual math problem with multiple-choice answers for students."
+    },
+    {
+      image: "/ui-gallery-6.jpg",
+      title: "Reading Comprehension Exercise",
+      description: "Interactive reading passage with comprehension questions for students."
+    },
+    {
+      image: "/ui-gallery-7.jpg",
+      title: "Long Division Tutorial",
+      description: "Step-by-step guide for long division problems with AI assistance."
+    },
+    {
+      image: "/ui-gallery-8.jpg",
+      title: "Time Problem Solution",
+      description: "Visual explanation of a time-based math problem with multiple-choice answers."
+    }
+  ];
+
   return (
     <div className="min-h-screen flex flex-col bg-gray-50">
       <Header />
@@ -97,21 +140,22 @@ const ProductOffering = () => {
             <h2 className="text-3xl font-bold text-center text-purple-800 mb-8">UI Gallery</h2>
             <p className="text-center text-lg mb-8">Explore the intuitive and engaging user interface of Boomerang Learning.</p>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-              {[1, 2, 3, 4, 5, 6, 7, 8].map((item) => (
-                <Dialog key={item}>
+              {uiGalleryItems.map((item, index) => (
+                <Dialog key={index}>
                   <DialogTrigger>
                     <div className="bg-white p-4 rounded-lg shadow-md transition-transform hover:scale-105 cursor-pointer">
-                      <div className="bg-gray-300 h-48 mb-4 flex items-center justify-center rounded">
-                        <p className="text-xl font-semibold">UI Screenshot {item}</p>
+                      <div className="bg-gray-300 h-48 mb-4 flex items-center justify-center rounded overflow-hidden">
+                        <img src={item.image} alt={item.title} className="w-full h-full object-cover" />
                       </div>
-                      <p className="text-center text-sm">Description of UI feature {item}</p>
+                      <p className="text-center text-sm font-semibold">{item.title}</p>
                     </div>
                   </DialogTrigger>
                   <DialogContent className="max-w-3xl">
-                    <div className="bg-gray-300 h-[80vh] flex items-center justify-center rounded">
-                      <p className="text-3xl font-semibold">UI Screenshot {item}</p>
+                    <div className="bg-gray-300 h-[80vh] flex items-center justify-center rounded overflow-hidden">
+                      <img src={item.image} alt={item.title} className="w-full h-full object-contain" />
                     </div>
-                    <p className="text-center mt-4">Detailed description of UI feature {item}</p>
+                    <h3 className="text-xl font-bold mt-4 mb-2">{item.title}</h3>
+                    <p className="text-center">{item.description}</p>
                   </DialogContent>
                 </Dialog>
               ))}
