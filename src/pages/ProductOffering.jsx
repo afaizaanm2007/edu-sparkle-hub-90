@@ -19,9 +19,9 @@ const ProductCard = ({ title, description, price }) => (
 
 const ProductOffering = () => {
   const products = [
-    { title: "EduTech Basic", description: "Essential learning tools for students", price: 9.99 },
-    { title: "EduTech Pro", description: "Advanced features for serious learners", price: 19.99 },
-    { title: "EduTech Enterprise", description: "Comprehensive solution for institutions", price: 99.99 },
+    { title: "Boomerang Basic", description: "Essential learning tools for students", price: 9.99 },
+    { title: "Boomerang Pro", description: "Advanced features for serious learners", price: 19.99 },
+    { title: "Boomerang Enterprise", description: "Comprehensive solution for institutions", price: 99.99 },
   ];
 
   return (
