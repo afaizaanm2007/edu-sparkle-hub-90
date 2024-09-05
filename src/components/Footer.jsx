@@ -4,24 +4,24 @@ import { Instagram, Linkedin } from 'lucide-react';
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-800 text-white py-8">
+    <footer className="bg-primary text-white py-8">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
-              <li><Link to="/" className="hover:text-blue-400">Home</Link></li>
-              <li><Link to="/product-offering" className="hover:text-blue-400">Product Offering</Link></li>
-              <li><Link to="/about" className="hover:text-blue-400">About Us</Link></li>
+              <li><Link to="/" className="hover:text-secondary">Home</Link></li>
+              <li><Link to="/product-offering" className="hover:text-secondary">Product Offering</Link></li>
+              <li><Link to="/about" className="hover:text-secondary">About Us</Link></li>
             </ul>
           </div>
           <div>
             <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
             <div className="space-y-2">
-              <a href="mailto:info@boomeranglearning.com" className="hover:text-blue-400 block">
+              <a href="mailto:info@boomeranglearning.com" className="hover:text-secondary block">
                 info@boomeranglearning.com
               </a>
-              <a href="mailto:boomeranglearning1@gmail.com" className="hover:text-blue-400 block">
+              <a href="mailto:boomeranglearning1@gmail.com" className="hover:text-secondary block">
                 boomeranglearning1@gmail.com
               </a>
             </div>
@@ -29,10 +29,10 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Follow Us</h3>
             <div className="flex space-x-4">
-              <a href="https://www.instagram.com/boomerang_learning/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400">
+              <a href="https://www.instagram.com/boomerang_learning/" target="_blank" rel="noopener noreferrer" className="hover:text-secondary">
                 <Instagram className="w-6 h-6" />
               </a>
-              <a href="https://www.linkedin.com/company/boomerang-learning" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400">
+              <a href="https://www.linkedin.com/company/boomerang-learning" target="_blank" rel="noopener noreferrer" className="hover:text-secondary">
                 <Linkedin className="w-6 h-6" />
               </a>
             </div>

@@ -6,15 +6,15 @@ const Header = () => {
   return (
     <header className="bg-white shadow-sm">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-        <Link to="/" className="text-2xl font-bold text-blue-600">Boomerang Learning</Link>
+        <Link to="/" className="text-2xl font-bold text-primary">Boomerang Learning</Link>
         <nav>
           <ul className="flex space-x-4">
-            <li><Link to="/" className="text-gray-600 hover:text-blue-600">Home</Link></li>
-            <li><Link to="/product-offering" className="text-gray-600 hover:text-blue-600">Product Offering</Link></li>
-            <li><Link to="/about" className="text-gray-600 hover:text-blue-600">About Us</Link></li>
+            <li><Link to="/" className="text-black hover:text-primary">Home</Link></li>
+            <li><Link to="/product-offering" className="text-black hover:text-primary">Product Offering</Link></li>
+            <li><Link to="/about" className="text-black hover:text-primary">About Us</Link></li>
           </ul>
         </nav>
-        <Button>Get Started</Button>
+        <Button className="bg-secondary hover:bg-secondary/90 text-white">Get Started</Button>
       </div>
     </header>
   );
