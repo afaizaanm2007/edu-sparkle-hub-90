@@ -40,7 +40,7 @@ const About = () => {
       role: "CEO",
       description: "Kris Lau is an ambitious learner. He runs a community service initiative providing student-led tutoring at the YMCA. He believes that quality education should be equally accessible to everyone.",
       linkedinUrl: "https://www.linkedin.com/mwlite/profile/in/kris-lau-542680261?trk=recent-searches",
-      instagramUrl: "https://www.instagram.com/krislau_/",
+      instagramUrl: "https://www.instagram.com/krislau101?igsh=MXN4dXdiZHBwYXpqdQ==",
       imageSrc: "/kris-lau.jpg"
     },
     {
@@ -48,14 +48,14 @@ const About = () => {
       role: "CSO",
       description: "Abdul-Aleem Mohammed is a natural leader with an inclination for hard work.",
       linkedinUrl: "https://www.linkedin.com/mwlite/profile/in/abdul-aleem-mohammed-67671a2b0?trk=blended-typeahead",
-      instagramUrl: "#",
+      instagramUrl: "https://www.instagram.com/a_faizaan_mo?igsh=anZraHBqeDFvaXpp&utm_source=qr",
       imageSrc: "/abdul-aleem-mohammed.jpg"
     },
     {
       name: "Parth Patel",
       role: "CFO",
       description: "Parth Patel has an eye for detail, which allows him to plan and execute long-term action.",
-      instagramUrl: "#",
+      instagramUrl: "https://www.instagram.com/notparthpatel?igsh=MTdhbTVkYTFxNWNmNw==",
       imageSrc: "/parth-patel.jpg"
     }
   ];
