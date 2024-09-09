@@ -1,33 +1,76 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useQuery } from '@tanstack/react-query';
+import axios from 'axios';
+import { Button } from "@/components/ui/button";
 
-const fetchInstagramFeed = async () => {
-  const accessToken = process.env.REACT_APP_INSTAGRAM_USER_ACCESS_TOKEN;
-  const fields = 'id,media_type,media_url,permalink,caption,thumbnail_url';
-  const limit = 6;
-  
-  const response = await fetch(`https://graph.instagram.com/me/media?fields=${fields}&limit=${limit}&access_token=${accessToken}`);
-  
-  if (!response.ok) {
-    throw new Error('Failed to fetch Instagram feed');
-  }
-  return response.json();
-};
+const INSTAGRAM_APP_ID = process.env.REACT_APP_INSTAGRAM_APP_ID;
+const INSTAGRAM_APP_SECRET = process.env.REACT_APP_INSTAGRAM_APP_SECRET;
+const REDIRECT_URI = `${window.location.origin}/instagram-callback`;
 
 const InstagramFeed = () => {
-  const { data, isLoading, error } = useQuery({
-    queryKey: ['instagramFeed'],
+  const [accessToken, setAccessToken] = useState(localStorage.getItem('instagramAccessToken'));
+
+  const handleLogin = () => {
+    window.location.href = `https://api.instagram.com/oauth/authorize?client_id=${INSTAGRAM_APP_ID}&redirect_uri=${REDIRECT_URI}&scope=user_profile,user_media&response_type=code`;
+  };
+
+  useEffect(() => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const code = urlParams.get('code');
+
+    if (code) {
+      exchangeCodeForToken(code);
+    }
+  }, []);
+
+  const exchangeCodeForToken = async (code) => {
+    try {
+      const response = await axios.post('https://api.instagram.com/oauth/access_token', null, {
+        params: {
+          client_id: INSTAGRAM_APP_ID,
+          client_secret: INSTAGRAM_APP_SECRET,
+          grant_type: 'authorization_code',
+          redirect_uri: REDIRECT_URI,
+          code,
+        },
+      });
+
+      const { access_token } = response.data;
+      localStorage.setItem('instagramAccessToken', access_token);
+      setAccessToken(access_token);
+    } catch (error) {
+      console.error('Error exchanging code for token:', error);
+    }
+  };
+
+  const fetchInstagramFeed = async () => {
+    if (!accessToken) return null;
+
+    const response = await axios.get(`https://graph.instagram.com/me/media?fields=id,caption,media_type,media_url,thumbnail_url,permalink&access_token=${accessToken}`);
+    return response.data.data;
+  };
+
+  const { data: posts, isLoading, error } = useQuery({
+    queryKey: ['instagramFeed', accessToken],
     queryFn: fetchInstagramFeed,
+    enabled: !!accessToken,
   });
+
+  if (!accessToken) {
+    return (
+      <div className="text-center">
+        <p className="mb-4">Connect your Instagram account to display your feed.</p>
+        <Button onClick={handleLogin}>Connect Instagram</Button>
+      </div>
+    );
+  }
 
   if (isLoading) return <div>Loading Instagram feed...</div>;
   if (error) return <div>Error loading Instagram feed: {error.message}</div>;
 
-  const posts = data?.data || [];
-
   return (
     <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-      {posts.map((post) => (
+      {posts && posts.map((post) => (
         <a 
           key={post.id} 
           href={post.permalink} 
