@@ -113,7 +113,7 @@ const Home = () => {
               </div>
               <div className="w-full md:w-1/2">
                 <img 
-                  src="/14436d_5c98adedc81247f6b1b4d82b3974ca19~mv2 (1).jpg" 
+                  src="/14436d_342ddc3149b243089b8a417a492e7d89~mv2 (1).jpg" 
                   alt="Boomerang Learning Team" 
                   className="w-full h-auto rounded-lg shadow-lg"
                 />
