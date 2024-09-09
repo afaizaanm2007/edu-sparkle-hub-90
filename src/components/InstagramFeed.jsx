@@ -2,7 +2,7 @@ import React from 'react';
 import { useQuery } from '@tanstack/react-query';
 
 const fetchInstagramFeed = async () => {
-  const accessToken = process.env.REACT_APP_INSTAGRAM_ACCESS_TOKEN;
+  const accessToken = process.env.REACT_APP_INSTAGRAM_USER_ACCESS_TOKEN;
   const fields = 'id,media_type,media_url,permalink,caption,thumbnail_url';
   const limit = 6;
   
