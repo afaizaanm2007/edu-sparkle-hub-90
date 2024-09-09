@@ -3,8 +3,8 @@ import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
 import { Button } from "@/components/ui/button";
 
-const INSTAGRAM_APP_ID = process.env.REACT_APP_INSTAGRAM_APP_ID;
-const INSTAGRAM_APP_SECRET = process.env.REACT_APP_INSTAGRAM_APP_SECRET;
+const INSTAGRAM_APP_ID = import.meta.env.VITE_INSTAGRAM_APP_ID;
+const INSTAGRAM_APP_SECRET = import.meta.env.VITE_INSTAGRAM_APP_SECRET;
 const REDIRECT_URI = `${window.location.origin}/instagram-callback`;
 
 const InstagramFeed = () => {
@@ -25,16 +25,7 @@ const InstagramFeed = () => {
 
   const exchangeCodeForToken = async (code) => {
     try {
-      const response = await axios.post('https://api.instagram.com/oauth/access_token', null, {
-        params: {
-          client_id: INSTAGRAM_APP_ID,
-          client_secret: INSTAGRAM_APP_SECRET,
-          grant_type: 'authorization_code',
-          redirect_uri: REDIRECT_URI,
-          code,
-        },
-      });
-
+      const response = await axios.post('/auth/instagram/callback', { code });
       const { access_token } = response.data;
       localStorage.setItem('instagramAccessToken', access_token);
       setAccessToken(access_token);
