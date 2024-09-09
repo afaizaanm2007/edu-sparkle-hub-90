@@ -93,6 +93,32 @@ const Home = () => {
             </div>
           </div>
         </section>
+
+        <section className="py-20 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="flex flex-col md:flex-row items-center">
+              <div className="w-full md:w-1/2 mb-10 md:mb-0">
+                <h2 className="text-4xl font-bold mb-6 text-gray-900">About Boomerang Learning</h2>
+                <p className="text-lg mb-6 text-gray-700">
+                  Boomerang Learning was founded by a group of students who were frustrated with the traditional education system and wanted to find a better way to address student-educator interactions, in and out of the classroom, in a way that makes education seamless and fun for the student while providing tutors and teachers with all the information they could ever need on the student.
+                </p>
+                <p className="text-lg mb-8 text-gray-700">
+                  We understand first-hand the challenges that students and teachers face in education, and we are committed to helping them succeed. Our team is dedicated to making education more engaging, effective, and accessible for everyone.
+                </p>
+                <Link to="/about">
+                  <Button className="bg-[#004aad] hover:bg-[#003c8f] text-white px-8 py-3 rounded-lg text-lg">
+                    Meet Our Team
+                  </Button>
+                </Link>
+              </div>
+              <div className="w-full md:w-1/2">
+                <div className="bg-gray-200 h-96 rounded-lg flex items-center justify-center">
+                  <p className="text-gray-600">Placeholder for image or additional content</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
       <Footer />
     </div>
