@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { Button } from "@/components/ui/button";
 import { Home as HomeIcon, FileText, BarChart2, Zap } from 'lucide-react';
+import InstagramFeed from '../components/InstagramFeed';
 
 const Home = () => {
   return (
@@ -30,14 +31,13 @@ const Home = () => {
                 </Link>
               </div>
               <div className="w-full md:w-1/2">
-                <div className="bg-gray-200 h-96 rounded-lg flex items-center justify-center">
-                  <p className="text-gray-600">Placeholder for image or additional content</p>
-                </div>
+                <InstagramFeed />
               </div>
             </div>
           </div>
         </section>
 
+        {/* Rest of the component remains unchanged */}
         <section className="py-16 bg-indigo-100">
           <div className="container mx-auto px-4">
             <p className="text-2xl text-indigo-700 text-center font-semibold leading-relaxed max-w-4xl mx-auto">
