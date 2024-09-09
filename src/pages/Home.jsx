@@ -37,6 +37,14 @@ const Home = () => {
             </div>
           </div>
         </section>
+
+        <section className="py-16 bg-indigo-100">
+          <div className="container mx-auto px-4">
+            <p className="text-2xl text-indigo-700 text-center font-semibold leading-relaxed max-w-4xl mx-auto">
+              Boomerang Learning is an Indiana-based educational platform that offers AI-generated gamified assignments, personalized diagnostic testing, and multi-faceted AI assistance to bridge knowledge gaps for students, teachers, parents, and afterschool programs.
+            </p>
+          </div>
+        </section>
       </main>
       <Footer />
     </div>
