@@ -2,12 +2,11 @@ import React from 'react';
 import { useQuery } from '@tanstack/react-query';
 
 const fetchInstagramFeed = async () => {
-  const accessToken = 'YOUR_INSTAGRAM_GRAPH_API_ACCESS_TOKEN';
-  const userId = 'YOUR_INSTAGRAM_BUSINESS_ACCOUNT_ID';
-  const fields = 'id,caption,media_type,media_url,permalink,thumbnail_url';
+  const accessToken = process.env.REACT_APP_INSTAGRAM_ACCESS_TOKEN;
+  const fields = 'id,media_type,media_url,permalink,caption,thumbnail_url';
   const limit = 6;
   
-  const response = await fetch(`https://graph.instagram.com/v12.0/${userId}/media?fields=${fields}&limit=${limit}&access_token=${accessToken}`);
+  const response = await fetch(`https://graph.instagram.com/me/media?fields=${fields}&limit=${limit}&access_token=${accessToken}`);
   
   if (!response.ok) {
     throw new Error('Failed to fetch Instagram feed');
