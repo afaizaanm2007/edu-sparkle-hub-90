@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { Button } from "@/components/ui/button";
@@ -21,9 +22,11 @@ const Home = () => {
                 <p className="text-lg mb-8 text-gray-600">
                   AI-assisted learning, adaptive quizzes, personalized progress tracking, dynamic challenges, quick diagnostics, and instant feedback for student success.
                 </p>
-                <Button className="bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-3 rounded-lg text-lg">
-                  Learn More
-                </Button>
+                <Link to="/product-offering">
+                  <Button className="bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-3 rounded-lg text-lg">
+                    Learn More
+                  </Button>
+                </Link>
               </div>
               <div className="w-full md:w-1/2">
                 {/* Placeholder for right side content */}
