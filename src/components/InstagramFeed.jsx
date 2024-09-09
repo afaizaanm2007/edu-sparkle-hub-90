@@ -1,9 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { useQuery } from '@tanstack/react-query';
 
 const fetchInstagramFeed = async () => {
-  const accessToken = 'YOUR_INSTAGRAM_ACCESS_TOKEN';
-  const response = await fetch(`https://graph.instagram.com/me/media?fields=id,caption,media_type,media_url,thumbnail_url,permalink&access_token=${accessToken}`);
+  const accessToken = 'YOUR_INSTAGRAM_GRAPH_API_ACCESS_TOKEN';
+  const userId = 'YOUR_INSTAGRAM_BUSINESS_ACCOUNT_ID';
+  const fields = 'id,caption,media_type,media_url,permalink,thumbnail_url';
+  const limit = 6;
+  
+  const response = await fetch(`https://graph.instagram.com/v12.0/${userId}/media?fields=${fields}&limit=${limit}&access_token=${accessToken}`);
+  
   if (!response.ok) {
     throw new Error('Failed to fetch Instagram feed');
   }
@@ -19,21 +24,27 @@ const InstagramFeed = () => {
   if (isLoading) return <div>Loading Instagram feed...</div>;
   if (error) return <div>Error loading Instagram feed: {error.message}</div>;
 
-  const posts = data?.data?.slice(0, 6) || [];
+  const posts = data?.data || [];
 
   return (
-    <div className="grid grid-cols-2 gap-4">
+    <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
       {posts.map((post) => (
-        <div key={post.id} className="relative overflow-hidden rounded-lg shadow-md">
+        <a 
+          key={post.id} 
+          href={post.permalink} 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className="relative overflow-hidden rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
+        >
           <img
             src={post.media_type === 'VIDEO' ? post.thumbnail_url : post.media_url}
-            alt={post.caption}
+            alt={post.caption?.slice(0, 100) || 'Instagram post'}
             className="w-full h-48 object-cover"
           />
           <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-2 text-sm">
             {post.caption?.slice(0, 50)}...
           </div>
-        </div>
+        </a>
       ))}
     </div>
   );
