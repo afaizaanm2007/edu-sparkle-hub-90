@@ -10,9 +10,7 @@ const GetStarted = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Here you would typically validate the password against a backend
-    // For this example, we'll use a placeholder password
-    if (password === 'devaccess') {
+    if (password === 'BoomerangdevTeam') {
       setError('');
       alert('Access granted to development builds!');
     } else {
