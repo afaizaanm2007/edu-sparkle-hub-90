@@ -59,4 +59,4 @@ jobs:
           app-name: 'Boomeranginfo'
           slot-name: 'Production'
           package: .
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_DB53F70AFBE045DAA826370BAD3078D3 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_D9BA41796DCA46A1821D68FDFDF94290 }}
