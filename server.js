@@ -15,8 +15,8 @@ app.get('/auth/instagram/callback', async (req, res) => {
   try {
     const response = await axios.post('https://api.instagram.com/oauth/access_token', null, {
       params: {
-        client_id: process.env.INSTAGRAM_CLIENT_ID,
-        client_secret: process.env.INSTAGRAM_CLIENT_SECRET,
+        client_id: process.env.INSTAGRAM_APP_ID,
+        client_secret: process.env.INSTAGRAM_APP_SECRET,
         grant_type: 'authorization_code',
         redirect_uri: process.env.INSTAGRAM_REDIRECT_URI,
         code,
