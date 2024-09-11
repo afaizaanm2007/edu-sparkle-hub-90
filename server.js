@@ -13,7 +13,7 @@ app.post('/auth/instagram/callback', async (req, res) => {
   const { code } = req.body;
 
   try {
-    const response = await axios.post('https://api.instagram.com/oauth/access_token', null, {
+    const response = await axios.post('https://graph.facebook.com/v18.0/oauth/access_token', null, {
       params: {
         client_id: '1249465969401900',
         client_secret: 'a378e8a422841df06baef5ede5e7e6e7',
@@ -23,11 +23,15 @@ app.post('/auth/instagram/callback', async (req, res) => {
       },
     });
 
-    const { access_token, user_id } = response.data;
+    const { access_token } = response.data;
 
-    // Here, you would typically save the access_token and user_id to your database
+    // Get the Instagram user ID
+    const userResponse = await axios.get(`https://graph.facebook.com/v18.0/me?fields=id,instagram_business_account&access_token=${access_token}`);
+    const instagramUserId = userResponse.data.instagram_business_account.id;
+
+    // Here, you would typically save the access_token and instagramUserId to your database
     // For this example, we'll just send it back to the client
-    res.json({ access_token, user_id });
+    res.json({ access_token, instagramUserId });
   } catch (error) {
     console.error('Error exchanging code for token:', error);
     res.status(500).json({ error: 'Failed to exchange code for token' });
