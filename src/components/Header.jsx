@@ -14,7 +14,9 @@ const Header = () => {
             <li><Link to="/about" className="text-black hover:text-primary">About Us</Link></li>
           </ul>
         </nav>
-        <Button className="bg-secondary hover:bg-secondary/90 text-white">Get Started</Button>
+        <Link to="/get-started">
+          <Button className="bg-secondary hover:bg-secondary/90 text-white">Get Started</Button>
+        </Link>
       </div>
     </header>
   );
