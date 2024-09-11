@@ -31,7 +31,7 @@ app.post('/auth/instagram/callback', async (req, res) => {
 
     // Here, you would typically save the access_token and instagramUserId to your database
     // For this example, we'll just send it back to the client
-    res.json({ access_token, instagramUserId });
+    res.json({ access_token, instagram_user_id: instagramUserId });
   } catch (error) {
     console.error('Error exchanging code for token:', error);
     res.status(500).json({ error: 'Failed to exchange code for token' });

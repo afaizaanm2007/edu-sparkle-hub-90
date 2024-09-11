@@ -8,6 +8,7 @@ const REDIRECT_URI = 'http://localhost:5000/auth/instagram/callback';
 
 const InstagramFeed = () => {
   const [accessToken, setAccessToken] = useState(localStorage.getItem('instagramAccessToken'));
+  const [instagramUserId, setInstagramUserId] = useState(localStorage.getItem('instagramUserId'));
 
   const handleLogin = () => {
     window.location.href = `https://www.facebook.com/v18.0/dialog/oauth?client_id=${INSTAGRAM_APP_ID}&redirect_uri=${REDIRECT_URI}&scope=instagram_basic,instagram_content_publish&response_type=code`;
@@ -25,28 +26,30 @@ const InstagramFeed = () => {
   const exchangeCodeForToken = async (code) => {
     try {
       const response = await axios.post('/auth/instagram/callback', { code });
-      const { access_token } = response.data;
+      const { access_token, instagram_user_id } = response.data;
       localStorage.setItem('instagramAccessToken', access_token);
+      localStorage.setItem('instagramUserId', instagram_user_id);
       setAccessToken(access_token);
+      setInstagramUserId(instagram_user_id);
     } catch (error) {
       console.error('Error exchanging code for token:', error);
     }
   };
 
   const fetchInstagramFeed = async () => {
-    if (!accessToken) return null;
+    if (!accessToken || !instagramUserId) return null;
 
-    const response = await axios.get(`https://graph.instagram.com/me/media?fields=id,caption,media_type,media_url,thumbnail_url,permalink&access_token=${accessToken}`);
+    const response = await axios.get(`https://graph.instagram.com/${instagramUserId}/media?fields=id,caption,media_type,media_url,thumbnail_url,permalink&access_token=${accessToken}`);
     return response.data.data;
   };
 
   const { data: posts, isLoading, error } = useQuery({
-    queryKey: ['instagramFeed', accessToken],
+    queryKey: ['instagramFeed', accessToken, instagramUserId],
     queryFn: fetchInstagramFeed,
-    enabled: !!accessToken,
+    enabled: !!accessToken && !!instagramUserId,
   });
 
-  if (!accessToken) {
+  if (!accessToken || !instagramUserId) {
     return (
       <div className="text-center">
         <p className="mb-4">Connect your Instagram account to display your feed.</p>
