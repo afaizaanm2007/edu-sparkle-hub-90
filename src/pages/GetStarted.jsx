@@ -29,7 +29,13 @@ const GetStarted = () => {
             Get Started
           </h2>
           <p className="mt-2 text-center text-sm text-gray-600">
-            This platform hasn't been released publicly yet, please check back soon! Or enter password to access development builds.
+            This platform hasn't been released publicly yet, please check back soon!
+          </p>
+          <p className="mt-2 text-center text-sm text-gray-600">
+            or
+          </p>
+          <p className="mt-2 text-center text-sm text-gray-600">
+            Enter password to access development builds.
           </p>
           <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
             <Input
