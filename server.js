@@ -9,16 +9,16 @@ const port = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json());
 
-app.get('/auth/instagram/callback', async (req, res) => {
-  const { code } = req.query;
+app.post('/auth/instagram/callback', async (req, res) => {
+  const { code } = req.body;
 
   try {
     const response = await axios.post('https://api.instagram.com/oauth/access_token', null, {
       params: {
-        client_id: process.env.INSTAGRAM_APP_ID,
-        client_secret: process.env.INSTAGRAM_APP_SECRET,
+        client_id: '1249465969401900',
+        client_secret: 'a378e8a422841df06baef5ede5e7e6e7',
         grant_type: 'authorization_code',
-        redirect_uri: process.env.INSTAGRAM_REDIRECT_URI,
+        redirect_uri: 'http://localhost:5000/auth/instagram/callback',
         code,
       },
     });

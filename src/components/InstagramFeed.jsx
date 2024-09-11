@@ -3,9 +3,8 @@ import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
 import { Button } from "@/components/ui/button";
 
-const INSTAGRAM_APP_ID = import.meta.env.VITE_INSTAGRAM_APP_ID;
-const INSTAGRAM_APP_SECRET = import.meta.env.VITE_INSTAGRAM_APP_SECRET;
-const REDIRECT_URI = `${window.location.origin}/instagram-callback`;
+const INSTAGRAM_APP_ID = '1249465969401900';
+const REDIRECT_URI = 'http://localhost:5000/auth/instagram/callback';
 
 const InstagramFeed = () => {
   const [accessToken, setAccessToken] = useState(localStorage.getItem('instagramAccessToken'));
