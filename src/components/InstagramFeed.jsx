@@ -3,15 +3,14 @@ import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
 import { Button } from "@/components/ui/button";
 
-const INSTAGRAM_APP_ID = '1249465969401900';
-const REDIRECT_URI = 'http://localhost:5000/auth/instagram/callback';
+const FACEBOOK_APP_ID = '1249465969401900';
+const REDIRECT_URI = 'http://localhost:5000/auth/facebook/callback';
 
-const InstagramFeed = () => {
-  const [accessToken, setAccessToken] = useState(localStorage.getItem('instagramAccessToken'));
-  const [instagramUserId, setInstagramUserId] = useState(localStorage.getItem('instagramUserId'));
+const FacebookFeed = () => {
+  const [accessToken, setAccessToken] = useState(localStorage.getItem('facebookAccessToken'));
 
   const handleLogin = () => {
-    window.location.href = `https://www.facebook.com/v18.0/dialog/oauth?client_id=${INSTAGRAM_APP_ID}&redirect_uri=${REDIRECT_URI}&scope=instagram_basic,instagram_content_publish&response_type=code`;
+    window.location.href = `https://www.facebook.com/v18.0/dialog/oauth?client_id=${FACEBOOK_APP_ID}&redirect_uri=${REDIRECT_URI}&scope=user_posts&response_type=code`;
   };
 
   useEffect(() => {
@@ -25,64 +24,63 @@ const InstagramFeed = () => {
 
   const exchangeCodeForToken = async (code) => {
     try {
-      const response = await axios.post('/auth/instagram/callback', { code });
-      const { access_token, instagram_user_id } = response.data;
-      localStorage.setItem('instagramAccessToken', access_token);
-      localStorage.setItem('instagramUserId', instagram_user_id);
+      const response = await axios.post('/auth/facebook/callback', { code });
+      const { access_token } = response.data;
+      localStorage.setItem('facebookAccessToken', access_token);
       setAccessToken(access_token);
-      setInstagramUserId(instagram_user_id);
     } catch (error) {
       console.error('Error exchanging code for token:', error);
     }
   };
 
-  const fetchInstagramFeed = async () => {
-    if (!accessToken || !instagramUserId) return null;
+  const fetchFacebookFeed = async () => {
+    if (!accessToken) return null;
 
-    const response = await axios.get(`https://graph.instagram.com/${instagramUserId}/media?fields=id,caption,media_type,media_url,thumbnail_url,permalink&access_token=${accessToken}`);
+    const response = await axios.get(`https://graph.facebook.com/v18.0/me/posts?fields=id,message,full_picture,created_time&access_token=${accessToken}`);
     return response.data.data;
   };
 
   const { data: posts, isLoading, error } = useQuery({
-    queryKey: ['instagramFeed', accessToken, instagramUserId],
-    queryFn: fetchInstagramFeed,
-    enabled: !!accessToken && !!instagramUserId,
+    queryKey: ['facebookFeed', accessToken],
+    queryFn: fetchFacebookFeed,
+    enabled: !!accessToken,
   });
 
-  if (!accessToken || !instagramUserId) {
+  if (!accessToken) {
     return (
       <div className="text-center">
-        <p className="mb-4">Connect your Instagram account to display your feed.</p>
-        <Button onClick={handleLogin}>Connect Instagram</Button>
+        <p className="mb-4">Connect your Facebook account to display your feed.</p>
+        <Button onClick={handleLogin}>Connect Facebook</Button>
       </div>
     );
   }
 
-  if (isLoading) return <div>Loading Instagram feed...</div>;
-  if (error) return <div>Error loading Instagram feed: {error.message}</div>;
+  if (isLoading) return <div>Loading Facebook feed...</div>;
+  if (error) return <div>Error loading Facebook feed: {error.message}</div>;
 
   return (
     <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
       {posts && posts.map((post) => (
-        <a 
+        <div 
           key={post.id} 
-          href={post.permalink} 
-          target="_blank" 
-          rel="noopener noreferrer" 
           className="relative overflow-hidden rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
         >
-          <img
-            src={post.media_type === 'VIDEO' ? post.thumbnail_url : post.media_url}
-            alt={post.caption?.slice(0, 100) || 'Instagram post'}
-            className="w-full h-48 object-cover"
-          />
+          {post.full_picture && (
+            <img
+              src={post.full_picture}
+              alt={post.message?.slice(0, 100) || 'Facebook post'}
+              className="w-full h-48 object-cover"
+            />
+          )}
           <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-2 text-sm">
-            {post.caption?.slice(0, 50)}...
+            {post.message?.slice(0, 50) || 'No message'}...
+            <br />
+            <small>{new Date(post.created_time).toLocaleDateString()}</small>
           </div>
-        </a>
+        </div>
       ))}
     </div>
   );
 };
 
-export default InstagramFeed;
+export default FacebookFeed;

@@ -1,10 +1,9 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { Button } from "@/components/ui/button";
-import { Home as HomeIcon, FileText, BarChart2, Zap } from 'lucide-react';
-import InstagramFeed from '../components/InstagramFeed';
+import FacebookFeed from '../components/InstagramFeed';
 
 const Home = () => {
   return (
@@ -14,7 +13,7 @@ const Home = () => {
         <HeroSection />
         <FeaturesSection />
         <AboutSection />
-        <InstagramSection />
+        <FacebookSection />
       </main>
       <Footer />
     </div>
@@ -42,7 +41,7 @@ const HeroSection = () => (
           </Link>
         </div>
         <div className="w-full md:w-1/2">
-          <InstagramFeed />
+          <FacebookFeed />
         </div>
       </div>
     </div>
@@ -99,11 +98,11 @@ const AboutSection = () => (
   </section>
 );
 
-const InstagramSection = () => (
+const FacebookSection = () => (
   <section className="py-20 bg-gray-100">
     <div className="container mx-auto px-4">
-      <h2 className="text-3xl font-bold text-center mb-10">Follow Us on Instagram</h2>
-      <InstagramFeed />
+      <h2 className="text-3xl font-bold text-center mb-10">Follow Us on Facebook</h2>
+      <FacebookFeed />
     </div>
   </section>
 );
