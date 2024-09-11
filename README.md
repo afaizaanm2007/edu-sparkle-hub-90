@@ -70,3 +70,36 @@ Simply visit your project at [GPT Engineer](https://gptengineer.app/projects/bcd
 ## I want to use a custom domain - is that possible?
 
 We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.gptengineer.app/tips-tricks/custom-domain/)
+
+## Running the project locally
+
+To run this project in a local environment, follow these steps:
+
+1. Ensure you have Node.js and npm installed on your machine. If not, you can download and install them from [nodejs.org](https://nodejs.org/).
+
+2. Clone the repository to your local machine:
+   ```
+   git clone <YOUR_REPOSITORY_URL>
+   ```
+
+3. Navigate to the project directory:
+   ```
+   cd <YOUR_PROJECT_NAME>
+   ```
+
+4. Install the project dependencies:
+   ```
+   npm install
+   ```
+
+5. Start the development server:
+   ```
+   npm run dev
+   ```
+
+6. Open your browser and visit `http://localhost:5173` (or the port number shown in your terminal) to view the application.
+
+Note: The backend server (if required) needs to be started separately. Make sure to run `node server.js` in a separate terminal window to start the Express server.
+
+Remember to set up any necessary environment variables or configuration files as specified in the project documentation.
+```
