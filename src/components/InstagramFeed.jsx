@@ -10,7 +10,7 @@ const InstagramFeed = () => {
   const [accessToken, setAccessToken] = useState(localStorage.getItem('instagramAccessToken'));
 
   const handleLogin = () => {
-    window.location.href = `https://www.facebook.com/v18.0/dialog/oauth?client_id=${INSTAGRAM_APP_ID}&redirect_uri=${REDIRECT_URI}&scope=instagram_basic,instagram_content_publish&response_type=code`;
+    window.location.href = `https://api.instagram.com/oauth/authorize?client_id=${INSTAGRAM_APP_ID}&redirect_uri=${REDIRECT_URI}&scope=user_profile,user_media&response_type=code`;
   };
 
   useEffect(() => {
