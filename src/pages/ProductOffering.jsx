@@ -24,12 +24,12 @@ const ProductOffering = () => {
           variants={fadeInUpVariants}
         >
           <div className="container mx-auto px-4">
-            <h1 className="text-5xl font-bold text-center text-purple-600 mb-6">Learning with Boomerang</h1>
-            <h2 className="text-3xl font-semibold text-center text-purple-800 mb-8">Our Comprehensive Learning Solution</h2>
-            <p className="text-xl text-center mb-12">
+            <motion.h1 className="text-5xl font-bold text-center text-purple-600 mb-6" variants={fadeInUpVariants}>Learning with Boomerang</motion.h1>
+            <motion.h2 className="text-3xl font-semibold text-center text-purple-800 mb-8" variants={fadeInUpVariants}>Our Comprehensive Learning Solution</motion.h2>
+            <motion.p className="text-xl text-center mb-12" variants={fadeInUpVariants}>
               Boomerang Learning offers a <span className="text-purple-600 font-semibold">revolutionary approach</span> to education, combining <span className="text-purple-600 font-semibold">AI technology</span> with proven pedagogical
               methods to create a <span className="text-purple-600 font-semibold">personalized learning experience</span> for every student.
-            </p>
+            </motion.p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {['For Students', 'For Teachers', 'For Parents'].map((title, index) => (
                 <motion.div
@@ -78,9 +78,9 @@ const ProductOffering = () => {
           variants={fadeInUpVariants}
         >
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold text-center text-purple-800 mb-8">MVP Demo</h2>
-            <p className="text-center text-lg mb-12">Experience a preview of Boomerang Learning's capabilities with our Minimum Viable Product demonstration.</p>
-            <div className="max-w-5xl mx-auto h-[600px]">
+            <motion.h2 className="text-3xl font-bold text-center text-purple-800 mb-8" variants={fadeInUpVariants}>MVP Demo</motion.h2>
+            <motion.p className="text-center text-lg mb-12" variants={fadeInUpVariants}>Experience a preview of Boomerang Learning's capabilities with our Minimum Viable Product demonstration.</motion.p>
+            <motion.div className="max-w-5xl mx-auto h-[600px]" variants={fadeInUpVariants}>
               <iframe
                 className="w-full h-full"
                 src="https://www.youtube.com/embed/Qno6Dw-u4RI"
@@ -89,7 +89,7 @@ const ProductOffering = () => {
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
               ></iframe>
-            </div>
+            </motion.div>
           </div>
         </motion.section>
 
@@ -103,8 +103,8 @@ const ProductOffering = () => {
           variants={fadeInUpVariants}
         >
           <div className="container mx-auto px-4">
-            <h2 className="text-4xl font-bold text-center text-purple-800 mb-8">Boomerang Learning: Empowering Education</h2>
-            <div className="max-w-4xl mx-auto space-y-6 text-lg">
+            <motion.h2 className="text-4xl font-bold text-center text-purple-800 mb-8" variants={fadeInUpVariants}>Boomerang Learning: Empowering Education</motion.h2>
+            <motion.div className="max-w-4xl mx-auto space-y-6 text-lg" variants={fadeInUpVariants}>
               <p>
                 Boomerang Learning is an <span className="text-purple-600 font-semibold">innovative educational platform</span> designed to revolutionize the way students learn and teachers teach. Our mission is to provide a <span className="text-purple-600 font-semibold">comprehensive, personalized learning experience</span> that adapts to each student's unique needs and learning style.
               </p>
@@ -120,7 +120,7 @@ const ProductOffering = () => {
               <p>
                 With Boomerang Learning, we're not just teaching – we're <span className="text-purple-600 font-semibold">transforming education</span>. Join us in our mission to empower students, support teachers, and involve parents in the learning journey like never before.
               </p>
-            </div>
+            </motion.div>
           </div>
         </motion.section>
       </main>

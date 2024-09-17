@@ -38,10 +38,10 @@ const About = () => {
     {
       name: "Noah Boyd",
       role: "Lead Web Developer",
-      description: "Noah Boyd leads the web development efforts at Boomerang Learning.",
-      linkedinUrl: "#",
-      instagramUrl: "#",
-      imageSrc: "/placeholder.svg"
+      description: "Noah is a determined and creative leader of the front-end architecture, with foundations in web development and engineering backgrounds.",
+      linkedinUrl: "https://www.linkedin.com/in/noahbboyd",
+      instagramUrl: "https://www.instagram.com/3nboyd?igsh=MW44Z2NmYndjMWFyYQ==",
+      imageSrc: "/noahpic.jpg"
     },
     {
       name: "Johnathan Baker",
@@ -62,10 +62,9 @@ const About = () => {
     {
       name: "Arnav Bhute",
       role: "Development Partner",
-      description: "Arnav Bhute contributes his expertise to Boomerang Learning's development team.",
-      linkedinUrl: "#",
-      instagramUrl: "#",
-      imageSrc: "/placeholder.svg"
+      description: "Arnav Bhute is a charming enthusiast who focuses on machine learning applications to power health and public policy. During free time, you can find him teaching kids about neural network design, researching, or debating legislation with his teammates like a Congressman.",
+      linkedinUrl: "https://www.linkedin.com/in/arnav-bhute-729247284?trk=contact-info",
+      imageSrc: "/arnavpic.jpg"
     }
   ];
 

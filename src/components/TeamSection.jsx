@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card, CardContent } from "@/components/ui/card";
-import { Instagram, Linkedin } from 'lucide-react';
+import { Linkedin, Instagram } from 'lucide-react';
 import { motion } from "framer-motion";
 
 const ProfileCard = ({ name, role, description, linkedinUrl, instagramUrl, imageSrc }) => (
@@ -26,12 +26,16 @@ const ProfileCard = ({ name, role, description, linkedinUrl, instagramUrl, image
         <p className="text-lg font-semibold text-gray-600 mb-2">{role}</p>
         <p className="text-gray-700">{description}</p>
         <div className="mt-4 flex space-x-3">
-          <a href={linkedinUrl} target="_blank" rel="noopener noreferrer" className="text-[#004aad] hover:text-[#c30083] transition-colors">
-            <Linkedin className="w-5 h-5" />
-          </a>
-          <a href={instagramUrl} target="_blank" rel="noopener noreferrer" className="text-[#c30083] hover:text-[#004aad] transition-colors">
-            <Instagram className="w-5 h-5" />
-          </a>
+          {linkedinUrl && linkedinUrl !== "#" && (
+            <a href={linkedinUrl} target="_blank" rel="noopener noreferrer" className="text-[#004aad] hover:text-[#c30083] transition-colors">
+              <Linkedin className="w-5 h-5" />
+            </a>
+          )}
+          {instagramUrl && instagramUrl !== "#" && (
+            <a href={instagramUrl} target="_blank" rel="noopener noreferrer" className="text-[#c30083] hover:text-[#004aad] transition-colors">
+              <Instagram className="w-5 h-5" />
+            </a>
+          )}
         </div>
       </CardContent>
     </Card>
