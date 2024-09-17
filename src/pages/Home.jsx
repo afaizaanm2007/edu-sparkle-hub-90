@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { Button } from "@/components/ui/button";
-import FacebookFeed from '../components/InstagramFeed';
+import InstagramFeed from '../components/InstagramFeed';
 
 const fadeInUpVariants = {
   hidden: { opacity: 0, y: 20 },
@@ -19,7 +19,7 @@ const Home = () => {
         <HeroSection />
         <FeaturesSection />
         <AboutSection />
-        <FacebookSection />
+        <InstagramSection />
       </main>
       <Footer />
     </div>
@@ -53,7 +53,7 @@ const HeroSection = () => (
           </Link>
         </motion.div>
         <motion.div className="w-full md:w-1/2" variants={fadeInUpVariants}>
-          <FacebookFeed />
+          <InstagramFeed />
         </motion.div>
       </div>
     </div>
@@ -122,7 +122,7 @@ const AboutSection = () => (
   </motion.section>
 );
 
-const FacebookSection = () => (
+const InstagramSection = () => (
   <motion.section 
     className="py-20 bg-gray-100"
     initial="hidden"
@@ -131,8 +131,8 @@ const FacebookSection = () => (
     variants={fadeInUpVariants}
   >
     <div className="container mx-auto px-4">
-      <h2 className="text-3xl font-bold text-center mb-10">Follow Us on Facebook</h2>
-      <FacebookFeed />
+      <h2 className="text-3xl font-bold text-center mb-10">Follow Us on Instagram</h2>
+      <InstagramFeed />
     </div>
   </motion.section>
 );
