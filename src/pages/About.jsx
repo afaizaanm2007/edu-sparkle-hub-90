@@ -38,10 +38,10 @@ const About = () => {
     {
       name: "Noah Boyd",
       role: "Lead Web Developer",
-      description: "Noah Boyd leads the web development efforts at Boomerang Learning.",
-      linkedinUrl: "#",
-      instagramUrl: "#",
-      imageSrc: "/placeholder.svg"
+      description: "Noah is a determined and creative leader of the front-end architecture, with foundations in web development and engineering backgrounds.",
+      linkedinUrl: "https://www.linkedin.com/in/noahbboyd",
+      instagramUrl: "https://www.instagram.com/3nboyd?igsh=MW44Z2NmYndjMWFyYQ==",
+      imageSrc: "/noahpic.jpg"
     },
     {
       name: "Johnathan Baker",
