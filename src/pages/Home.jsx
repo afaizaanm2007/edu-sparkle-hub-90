@@ -17,9 +17,10 @@ const Home = () => {
       <Header />
       <main className="flex-grow">
         <HeroSection />
+        <InstagramSection />
         <FeaturesSection />
         <AboutSection />
-        <InstagramSection />
+        <LogoSection />
       </main>
       <Footer />
     </div>
@@ -53,8 +54,29 @@ const HeroSection = () => (
           </Link>
         </motion.div>
         <motion.div className="w-full md:w-1/2" variants={fadeInUpVariants}>
-          <InstagramFeed />
+          <img 
+            src="/boomerang-learning-logo.jpg" 
+            alt="Boomerang Learning Logo" 
+            className="w-full h-auto rounded-lg shadow-lg"
+          />
         </motion.div>
+      </div>
+    </div>
+  </motion.section>
+);
+
+const InstagramSection = () => (
+  <motion.section 
+    className="py-20 bg-gray-100"
+    initial="hidden"
+    whileInView="visible"
+    viewport={{ once: true }}
+    variants={fadeInUpVariants}
+  >
+    <div className="container mx-auto px-4">
+      <h2 className="text-4xl font-bold text-center mb-10">Follow Us on Instagram</h2>
+      <div className="max-w-4xl mx-auto">
+        <InstagramFeed />
       </div>
     </div>
   </motion.section>
@@ -122,7 +144,7 @@ const AboutSection = () => (
   </motion.section>
 );
 
-const InstagramSection = () => (
+const LogoSection = () => (
   <motion.section 
     className="py-20 bg-gray-100"
     initial="hidden"
@@ -131,8 +153,13 @@ const InstagramSection = () => (
     variants={fadeInUpVariants}
   >
     <div className="container mx-auto px-4">
-      <h2 className="text-3xl font-bold text-center mb-10">Follow Us on Instagram</h2>
-      <InstagramFeed />
+      <motion.div className="max-w-2xl mx-auto" variants={fadeInUpVariants}>
+        <img 
+          src="/boomerang-learning-logo.jpg" 
+          alt="Boomerang Learning Logo" 
+          className="w-full h-auto"
+        />
+      </motion.div>
     </div>
   </motion.section>
 );
