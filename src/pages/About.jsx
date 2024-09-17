@@ -62,10 +62,9 @@ const About = () => {
     {
       name: "Arnav Bhute",
       role: "Development Partner",
-      description: "Arnav Bhute contributes his expertise to Boomerang Learning's development team.",
-      linkedinUrl: "#",
-      instagramUrl: "#",
-      imageSrc: "/placeholder.svg"
+      description: "Arnav Bhute is a charming enthusiast who focuses on machine learning applications to power health and public policy. During free time, you can find him teaching kids about neural network design, researching, or debating legislation with his teammates like a Congressman.",
+      linkedinUrl: "https://www.linkedin.com/in/arnav-bhute-729247284?trk=contact-info",
+      imageSrc: "/arnavpic.jpg"
     }
   ];
 
