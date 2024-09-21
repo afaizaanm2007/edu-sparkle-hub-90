@@ -1,105 +1,51 @@
-# Welcome to your GPT Engineer project
+# Boomerang Learning
 
-## Project info
+## Local Deployment
 
-**Project**: edu-sparkle-hub
+To run this project locally, follow these steps:
 
-**URL**: https://run.gptengineer.app/projects/bcdf8628-b9d3-4034-b7fd-63dc20ac0d5a/improve
-
-## How can I edit this code?
-
-There are several ways of editing your application.
-
-**Use GPT Engineer**
-
-Simply visit the GPT Engineer project at [GPT Engineer](https://gptengineer.app/projects/bcdf8628-b9d3-4034-b7fd-63dc20ac0d5a/improve) and start prompting.
-
-Changes made via gptengineer.app will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in the GPT Engineer UI.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with .
-
-- Vite
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-All GPT Engineer projects can be deployed directly via the GPT Engineer app.
-
-Simply visit your project at [GPT Engineer](https://gptengineer.app/projects/bcdf8628-b9d3-4034-b7fd-63dc20ac0d5a/improve) and click on Share -> Publish.
-
-## I want to use a custom domain - is that possible?
-
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.gptengineer.app/tips-tricks/custom-domain/)
-
-## Running the project locally
-
-To run this project in a local environment, follow these steps:
-
-1. Ensure you have Node.js and npm installed on your machine. If not, you can download and install them from [nodejs.org](https://nodejs.org/).
-
-2. Clone the repository to your local machine:
+1. Clone the repository:
    ```
-   git clone <YOUR_REPOSITORY_URL>
+   git clone <repository-url>
+   cd boomerang-learning
    ```
 
-3. Navigate to the project directory:
-   ```
-   cd <YOUR_PROJECT_NAME>
-   ```
-
-4. Install the project dependencies:
+2. Install dependencies:
    ```
    npm install
    ```
 
-5. Start the development server:
+3. Start the development server:
    ```
    npm run dev
    ```
 
-6. Open your browser and visit `http://localhost:5173` (or the port number shown in your terminal) to view the application.
+4. Open your browser and visit `http://localhost:5173` (or the port shown in your terminal).
 
-Note: The backend server (if required) needs to be started separately. Make sure to run `node server.js` in a separate terminal window to start the Express server.
+## Project Overview
 
-Remember to set up any necessary environment variables or configuration files as specified in the project documentation.
-```
+Boomerang Learning is an innovative educational platform designed to revolutionize the learning experience for students, teachers, and parents. Our AI-powered system provides personalized learning paths, comprehensive progress tracking, and engaging interactive content.
+
+### Key Features
+
+- Personalized learning experiences
+- AI-generated questions based on state curricula
+- Real-time progress monitoring for students, teachers, and parents
+- Interactive quizzes and gamified learning
+
+## Technology Stack
+
+- React
+- Vite
+- Tailwind CSS
+- React Router
+- Framer Motion
+- React Query
+
+## Contributing
+
+We welcome contributions to Boomerang Learning. Please read our contributing guidelines before submitting pull requests.
+
+## License
+
+This project is licensed under the MIT License.

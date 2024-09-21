@@ -8,7 +8,8 @@ import GetStarted from "./pages/GetStarted";
 const queryClient = new QueryClient();
 
 const App = () => {
-  console.log("Is this a static website?", process.env.REACT_APP_IS_STATIC === "true");
+  // Remove the console.log statement that was causing the error
+  // console.log("Is this a static website?", process.env.REACT_APP_IS_STATIC === "true");
 
   return (
     <QueryClientProvider client={queryClient}>
