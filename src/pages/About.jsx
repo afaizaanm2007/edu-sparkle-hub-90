@@ -44,7 +44,7 @@ const About = () => {
       imageSrc: "/noah pic.jpg"
     },
     {
-      name: "Johnathan Baker",
+      name: "Jonathan Baker",
       role: "Development Partner",
       description: "I am aspiring back-end developer pursuing a degree in Computer Science. I am passionate about contributing to the tech community and striving to improve society.",
       linkedinUrl: "https://www.linkedin.com/in/jonathanr-baker",
