@@ -4,7 +4,7 @@ const cors = require('cors');
 require('dotenv').config();
 
 const app = express();
-const port = 8080; // Explicitly set the port to 8080
+const port = process.env.PORT || 8080; // Use the PORT environment variable provided by Azure, or default to 8080
 
 app.use(cors());
 app.use(express.json());
@@ -17,7 +17,7 @@ app.post('/auth/facebook/callback', async (req, res) => {
       params: {
         client_id: '1249465969401900',
         client_secret: 'a378e8a422841df06baef5ede5e7e6e7',
-        redirect_uri: `http://localhost:${port}/auth/facebook/callback`, // Use the correct port
+        redirect_uri: `http://localhost:${port}/auth/facebook/callback`,
         code,
       },
     });
