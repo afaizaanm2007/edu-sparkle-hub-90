@@ -21,7 +21,6 @@ const Home = () => {
         <InstagramSection />
         <FeaturesSection />
         <AboutSection />
-        <LogoSection />
       </main>
       <Footer />
     </div>
@@ -157,26 +156,6 @@ const AboutSection = () => (
           />
         </motion.div>
       </div>
-    </div>
-  </motion.section>
-);
-
-const LogoSection = () => (
-  <motion.section 
-    className="py-20 bg-gray-100"
-    initial="hidden"
-    whileInView="visible"
-    viewport={{ once: true }}
-    variants={fadeInUpVariants}
-  >
-    <div className="container mx-auto px-4">
-      <motion.div className="max-w-2xl mx-auto" variants={fadeInUpVariants}>
-        <img 
-          src="/boomerang-learning-logo.jpg" 
-          alt="Boomerang Learning Logo" 
-          className="w-full h-auto"
-        />
-      </motion.div>
     </div>
   </motion.section>
 );
