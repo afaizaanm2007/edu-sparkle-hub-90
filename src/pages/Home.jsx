@@ -16,6 +16,7 @@ const Home = () => {
     <div className="min-h-screen flex flex-col bg-gray-50">
       <Header />
       <main className="flex-grow">
+        <IntroSection />
         <HeroSection />
         <InstagramSection />
         <FeaturesSection />
@@ -26,6 +27,22 @@ const Home = () => {
     </div>
   );
 };
+
+const IntroSection = () => (
+  <motion.section 
+    className="py-10 bg-white"
+    initial="hidden"
+    whileInView="visible"
+    viewport={{ once: true }}
+    variants={fadeInUpVariants}
+  >
+    <div className="container mx-auto px-4">
+      <motion.p className="text-lg text-gray-700 text-center max-w-4xl mx-auto" variants={fadeInUpVariants}>
+        Boomerang Learning is an Indiana-based educational platform that offers AI-generated gamified assignments, personalized diagnostic testing, and multi-faceted AI assistance to bridge knowledge gaps for students, teachers, parents, and afterschool programs.
+      </motion.p>
+    </div>
+  </motion.section>
+);
 
 const HeroSection = () => (
   <motion.section 
