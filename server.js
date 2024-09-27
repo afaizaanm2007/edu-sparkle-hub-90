@@ -4,7 +4,7 @@ const cors = require('cors');
 require('dotenv').config();
 
 const app = express();
-const port = process.env.PORT || 8080; // Ensure we're using port 8080 if not specified in environment
+const port = 8080; // Explicitly set the port to 8080
 
 app.use(cors());
 app.use(express.json());
