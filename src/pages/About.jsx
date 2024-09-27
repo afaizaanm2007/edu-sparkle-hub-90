@@ -46,10 +46,10 @@ const About = () => {
     {
       name: "Johnathan Baker",
       role: "Development Partner",
-      description: "Johnathan Baker contributes to the development of Boomerang Learning's platform.",
-      linkedinUrl: "#",
+      description: "I am aspiring back-end developer pursuing a degree in Computer Science. I am passionate about contributing to the tech community and striving to improve society.",
+      linkedinUrl: "https://www.linkedin.com/in/jonathanr-baker",
       instagramUrl: "#",
-      imageSrc: "/placeholder.svg"
+      imageSrc: "/johnathan-baker.jpg"
     },
     {
       name: "David Clutter",
