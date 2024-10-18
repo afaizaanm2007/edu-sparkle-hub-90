@@ -49,7 +49,7 @@ const About = () => {
       description: "I am aspiring back-end developer pursuing a degree in Computer Science. I am passionate about contributing to the tech community and striving to improve society.",
       linkedinUrl: "https://www.linkedin.com/in/jonathanr-baker",
       instagramUrl: "#",
-      imageSrc: "/jonathan-baker.jpg"
+      imageSrc: "/placeholder.svg"
     },
     {
       name: "David Clutter",
