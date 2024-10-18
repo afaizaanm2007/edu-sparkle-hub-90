@@ -16,16 +16,32 @@ const Home = () => {
     <div className="min-h-screen flex flex-col bg-gray-50">
       <Header />
       <main className="flex-grow">
+        <IntroSection />
         <HeroSection />
-        <InstagramSection />
         <FeaturesSection />
         <AboutSection />
-        <LogoSection />
+        <InstagramSection />
       </main>
       <Footer />
     </div>
   );
 };
+
+const IntroSection = () => (
+  <motion.section 
+    className="py-10 bg-white"
+    initial="hidden"
+    whileInView="visible"
+    viewport={{ once: true }}
+    variants={fadeInUpVariants}
+  >
+    <div className="container mx-auto px-4">
+      <motion.p className="text-lg text-gray-700 text-center max-w-4xl mx-auto" variants={fadeInUpVariants}>
+        Boomerang Learning is an Indiana-based educational platform that offers AI-generated gamified assignments, personalized diagnostic testing, and multi-faceted AI assistance to bridge knowledge gaps for students, teachers, parents, and afterschool programs.
+      </motion.p>
+    </div>
+  </motion.section>
+);
 
 const HeroSection = () => (
   <motion.section 
@@ -55,28 +71,11 @@ const HeroSection = () => (
         </motion.div>
         <motion.div className="w-full md:w-1/2" variants={fadeInUpVariants}>
           <img 
-            src="/boomerang-learning-logo.jpg" 
+            src="/boomerang-learning-logo.png" 
             alt="Boomerang Learning Logo" 
-            className="w-full h-auto rounded-lg shadow-lg"
+            className="w-full h-auto rounded-lg shadow-lg mx-auto object-cover"
           />
         </motion.div>
-      </div>
-    </div>
-  </motion.section>
-);
-
-const InstagramSection = () => (
-  <motion.section 
-    className="py-20 bg-gray-100 w-full"
-    initial="hidden"
-    whileInView="visible"
-    viewport={{ once: true }}
-    variants={fadeInUpVariants}
-  >
-    <div className="container mx-auto px-4">
-      <h2 className="text-4xl font-bold text-center mb-10">Follow Us on Instagram</h2>
-      <div className="w-full">
-        <InstagramFeed />
       </div>
     </div>
   </motion.section>
@@ -136,7 +135,7 @@ const AboutSection = () => (
           <img 
             src="/chequepic.jpg" 
             alt="Boomerang Learning Team" 
-            className="w-full h-auto rounded-lg shadow-lg"
+            className="w-full h-auto rounded-lg shadow-lg mx-auto object-cover"
           />
         </motion.div>
       </div>
@@ -144,7 +143,7 @@ const AboutSection = () => (
   </motion.section>
 );
 
-const LogoSection = () => (
+const InstagramSection = () => (
   <motion.section 
     className="py-20 bg-gray-100"
     initial="hidden"
@@ -153,13 +152,10 @@ const LogoSection = () => (
     variants={fadeInUpVariants}
   >
     <div className="container mx-auto px-4">
-      <motion.div className="max-w-2xl mx-auto" variants={fadeInUpVariants}>
-        <img 
-          src="/boomerang-learning-logo.jpg" 
-          alt="Boomerang Learning Logo" 
-          className="w-full h-auto"
-        />
-      </motion.div>
+      <h2 className="text-4xl font-bold text-center mb-10">Follow Us on Instagram</h2>
+      <div className="max-w-2xl mx-auto">
+        <InstagramFeed />
+      </div>
     </div>
   </motion.section>
 );

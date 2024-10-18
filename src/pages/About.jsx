@@ -41,13 +41,13 @@ const About = () => {
       description: "Noah is a determined and creative leader of the front-end architecture, with foundations in web development and engineering backgrounds.",
       linkedinUrl: "https://www.linkedin.com/in/noahbboyd",
       instagramUrl: "https://www.instagram.com/3nboyd?igsh=MW44Z2NmYndjMWFyYQ==",
-      imageSrc: "/noahpic.jpg"
+      imageSrc: "/noah pic.jpg"
     },
     {
-      name: "Johnathan Baker",
+      name: "Jonathan Baker",
       role: "Development Partner",
-      description: "Johnathan Baker contributes to the development of Boomerang Learning's platform.",
-      linkedinUrl: "#",
+      description: "I am aspiring back-end developer pursuing a degree in Computer Science. I am passionate about contributing to the tech community and striving to improve society.",
+      linkedinUrl: "https://www.linkedin.com/in/jonathanr-baker",
       instagramUrl: "#",
       imageSrc: "/placeholder.svg"
     },
@@ -64,7 +64,7 @@ const About = () => {
       role: "Development Partner",
       description: "Arnav Bhute is a charming enthusiast who focuses on machine learning applications to power health and public policy. During free time, you can find him teaching kids about neural network design, researching, or debating legislation with his teammates like a Congressman.",
       linkedinUrl: "https://www.linkedin.com/in/arnav-bhute-729247284?trk=contact-info",
-      imageSrc: "/arnavpic.jpg"
+      imageSrc: "/arnav pic.png"
     }
   ];
 
