@@ -29,14 +29,14 @@ const Home = () => {
 
 const IntroSection = () => (
   <motion.section 
-    className="py-32 mt-16 bg-white"
+    className="py-40 mt-8 bg-white"
     initial="hidden"
     whileInView="visible"
     viewport={{ once: true }}
     variants={fadeInUpVariants}
   >
     <div className="container mx-auto px-4">
-      <motion.p className="text-3xl md:text-4xl text-gray-700 text-center max-w-4xl mx-auto leading-relaxed font-medium" variants={fadeInUpVariants}>
+      <motion.p className="text-4xl md:text-5xl text-gray-700 text-center max-w-4xl mx-auto leading-relaxed font-medium" variants={fadeInUpVariants}>
         Boomerang Learning is an Indiana-based educational platform that offers <span className="text-[#004aad] font-bold">AI-generated gamified assignments</span>, <span className="text-[#c30083] font-bold">personalized diagnostic testing</span>, and <span className="text-[#004aad] font-bold">multi-faceted AI assistance</span> to bridge knowledge gaps for students, teachers, parents, and afterschool programs.
       </motion.p>
     </div>
@@ -71,7 +71,7 @@ const HeroSection = () => (
         </motion.div>
         <motion.div className="w-full md:w-1/2" variants={fadeInUpVariants}>
           <img 
-            src="/boomerang logo.png" 
+            src="/boomerang-learning-new-logo.png" 
             alt="Boomerang Learning Logo" 
             className="w-full max-w-2xl h-auto mx-auto object-contain"
           />
