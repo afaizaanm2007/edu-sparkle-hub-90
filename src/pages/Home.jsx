@@ -16,6 +16,7 @@ const Home = () => {
     <div className="min-h-screen flex flex-col bg-gray-50">
       <Header />
       <main className="flex-grow">
+        <UIPreview />
         <IntroSection />
         <HeroSection />
         <FeaturesSection />
@@ -27,18 +28,43 @@ const Home = () => {
   );
 };
 
-const IntroSection = () => (
-  <motion.section 
-    className="py-40 mt-8 bg-white"
+const UIPreview = () => (
+  <motion.section
+    className="py-16 mt-8 bg-white"
     initial="hidden"
     whileInView="visible"
     viewport={{ once: true }}
     variants={fadeInUpVariants}
   >
     <div className="container mx-auto px-4">
-      <motion.p className="text-4xl md:text-5xl text-gray-700 text-center max-w-4xl mx-auto leading-relaxed font-medium" variants={fadeInUpVariants}>
-        Boomerang Learning is an Indiana-based educational platform that offers <span className="text-[#004aad] font-bold">AI-generated gamified assignments</span>, <span className="text-[#c30083] font-bold">personalized diagnostic testing</span>, and <span className="text-[#004aad] font-bold">multi-faceted AI assistance</span> to bridge knowledge gaps for students, teachers, parents, and afterschool programs.
-      </motion.p>
+      <motion.div variants={fadeInUpVariants}>
+        <img 
+          src="/boomerang-learning-new-logo.png" 
+          alt="Boomerang Learning Interface Preview" 
+          className="w-full max-w-4xl mx-auto h-auto object-contain"
+        />
+      </motion.div>
+    </div>
+  </motion.section>
+);
+
+const IntroSection = () => (
+  <motion.section 
+    className="py-20 bg-white"
+    initial="hidden"
+    whileInView="visible"
+    viewport={{ once: true }}
+    variants={fadeInUpVariants}
+  >
+    <div className="container mx-auto px-4">
+      <motion.div 
+        className="bg-blue-50 rounded-2xl p-8 max-w-4xl mx-auto"
+        variants={fadeInUpVariants}
+      >
+        <p className="text-3xl md:text-4xl text-gray-700 text-center leading-relaxed font-medium">
+          Boomerang Learning is an Indiana-based educational platform that offers <span className="text-[#004aad] font-bold">AI-generated gamified assignments</span>, <span className="text-[#c30083] font-bold">personalized diagnostic testing</span>, and <span className="text-[#004aad] font-bold">multi-faceted AI assistance</span> to bridge knowledge gaps for students, teachers, parents, and afterschool programs.
+        </p>
+      </motion.div>
     </div>
   </motion.section>
 );
