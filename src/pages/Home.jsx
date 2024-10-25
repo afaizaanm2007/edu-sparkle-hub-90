@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 import { motion } from "framer-motion";
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import { Button } from "@/components/ui/button";
 import InstagramFeed from '../components/InstagramFeed';
+import { Button } from "@/components/ui/button";
 
 const fadeInUpVariants = {
   hidden: { opacity: 0, y: 20 },
@@ -29,15 +29,15 @@ const Home = () => {
 
 const IntroSection = () => (
   <motion.section 
-    className="py-10 bg-white"
+    className="py-16 mt-8 bg-white"
     initial="hidden"
     whileInView="visible"
     viewport={{ once: true }}
     variants={fadeInUpVariants}
   >
     <div className="container mx-auto px-4">
-      <motion.p className="text-lg text-gray-700 text-center max-w-4xl mx-auto" variants={fadeInUpVariants}>
-        Boomerang Learning is an Indiana-based educational platform that offers AI-generated gamified assignments, personalized diagnostic testing, and multi-faceted AI assistance to bridge knowledge gaps for students, teachers, parents, and afterschool programs.
+      <motion.p className="text-xl md:text-2xl text-gray-700 text-center max-w-4xl mx-auto leading-relaxed font-medium" variants={fadeInUpVariants}>
+        Boomerang Learning is an Indiana-based educational platform that offers <span className="text-[#004aad] font-bold">AI-generated gamified assignments</span>, <span className="text-[#c30083] font-bold">personalized diagnostic testing</span>, and <span className="text-[#004aad] font-bold">multi-faceted AI assistance</span> to bridge knowledge gaps for students, teachers, parents, and afterschool programs.
       </motion.p>
     </div>
   </motion.section>
@@ -52,8 +52,8 @@ const HeroSection = () => (
     variants={fadeInUpVariants}
   >
     <div className="container mx-auto px-4">
-      <div className="flex flex-col md:flex-row items-center">
-        <motion.div className="w-full md:w-1/2 mb-10 md:mb-0" variants={fadeInUpVariants}>
+      <div className="flex flex-col md:flex-row items-center gap-12">
+        <motion.div className="w-full md:w-1/2" variants={fadeInUpVariants}>
           <h1 className="text-5xl font-bold mb-6 text-gray-900">
             Personalized Learning Platform
           </h1>
@@ -71,9 +71,9 @@ const HeroSection = () => (
         </motion.div>
         <motion.div className="w-full md:w-1/2" variants={fadeInUpVariants}>
           <img 
-            src="/boomerang-learning-logo.png" 
+            src="/boomerang logo.png" 
             alt="Boomerang Learning Logo" 
-            className="w-full h-auto rounded-lg shadow-lg mx-auto object-cover"
+            className="w-full max-w-2xl h-auto mx-auto object-contain"
           />
         </motion.div>
       </div>
