@@ -39,8 +39,8 @@ const UIPreview = () => (
     <div className="container mx-auto px-4">
       <motion.div variants={fadeInUpVariants}>
         <img 
-          src="/Boomerang Learning Demo.png" 
-          alt="Boomerang Learning Interface Preview" 
+          src="/demo.png" 
+          alt="Boomerang Learning UI Preview" 
           className="w-full max-w-4xl mx-auto h-auto object-contain"
         />
       </motion.div>
@@ -97,8 +97,8 @@ const HeroSection = () => (
         </motion.div>
         <motion.div className="w-full md:w-1/2" variants={fadeInUpVariants}>
           <img 
-            src="/boomerang-learning-new-logo.png" 
-            alt="Boomerang Learning Logo" 
+            src="/logo.png" 
+            alt="Boomerang Logo" 
             className="w-full max-w-2xl h-auto mx-auto object-contain"
           />
         </motion.div>
