@@ -7,7 +7,7 @@ const Header = () => {
     <header className="bg-white shadow-sm">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         <Link to="/" className="flex items-center">
-          <img src="/boomerang-learning-new-logo.png" alt="Boomerang Learning" className="h-12 w-auto" />
+          <img src="/logo.png" alt="Boomerang Learning" className="h-12 w-auto" />
         </Link>
         <nav>
           <ul className="flex space-x-4">
