@@ -39,7 +39,7 @@ const UIPreview = () => (
     <div className="container mx-auto px-4">
       <motion.div variants={fadeInUpVariants}>
         <img 
-          src="/boomerang-learning-new-logo.png" 
+          src="/Boomerang Learning Demo.png" 
           alt="Boomerang Learning Interface Preview" 
           className="w-full max-w-4xl mx-auto h-auto object-contain"
         />
