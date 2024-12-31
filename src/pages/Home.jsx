@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import InstagramFeed from '../components/InstagramFeed';
+import TestimonialsCarousel from '../components/TestimonialsCarousel';
 import { Button } from "@/components/ui/button";
 
 const fadeInUpVariants = {
@@ -18,6 +19,7 @@ const Home = () => {
       <main className="flex-grow">
         <UIPreview />
         <IntroSection />
+        <TestimonialsCarousel />
         <HeroSection />
         <FeaturesSection />
         <AboutSection />
