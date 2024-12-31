@@ -6,6 +6,7 @@ import Footer from '../components/Footer';
 import InstagramFeed from '../components/InstagramFeed';
 import TestimonialsCarousel from '../components/TestimonialsCarousel';
 import { Button } from "@/components/ui/button";
+import { Linkedin } from 'lucide-react';
 
 const fadeInUpVariants = {
   hidden: { opacity: 0, y: 20 },
@@ -180,9 +181,35 @@ const InstagramSection = () => (
     variants={fadeInUpVariants}
   >
     <div className="container mx-auto px-4">
-      <h2 className="text-4xl font-bold text-center mb-10">Follow Us on Instagram</h2>
-      <div className="max-w-2xl mx-auto">
-        <InstagramFeed />
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {/* Instagram Column */}
+        <div>
+          <h2 className="text-4xl font-bold text-center mb-10">Follow Us on Instagram</h2>
+          <div className="max-w-xl mx-auto">
+            <InstagramFeed />
+          </div>
+        </div>
+        
+        {/* LinkedIn Column */}
+        <div className="flex flex-col items-center justify-center">
+          <h2 className="text-4xl font-bold text-center mb-10">Connect on LinkedIn</h2>
+          <div className="bg-white p-8 rounded-lg shadow-lg max-w-xl w-full">
+            <div className="flex flex-col items-center text-center">
+              <Linkedin className="w-20 h-20 text-[#0A66C2] mb-6" />
+              <h3 className="text-2xl font-semibold mb-4">Boomerang Learning</h3>
+              <p className="text-gray-600 mb-6">Follow us on LinkedIn to stay updated with our latest developments and educational insights.</p>
+              <a 
+                href="https://www.linkedin.com/company/boomerang-learning/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-[#0A66C2] text-white px-8 py-3 rounded-lg hover:bg-[#084e95] transition-colors duration-300 flex items-center gap-2"
+              >
+                <Linkedin className="w-5 h-5" />
+                Follow Us
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </motion.section>

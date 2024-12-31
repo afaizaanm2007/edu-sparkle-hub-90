@@ -29,7 +29,7 @@ const testimonials = [
 
 const TestimonialsCarousel = () => {
   const plugin = React.useRef(
-    Autoplay({ delay: 5000, stopOnInteraction: true })
+    Autoplay({ delay: 10000, stopOnInteraction: true })
   );
 
   return (
