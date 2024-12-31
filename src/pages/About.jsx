@@ -44,13 +44,13 @@ const About = () => {
       imageSrc: "/noah pic.jpg"
     },
     {
-      name: "Jonathan Baker",
+      name: "Development Partner",
       role: "Development Partner",
       description: "We are currently undergoing staff changes and this page will soon be updated to reflect that.",
       imageSrc: "/placeholder.svg"
     },
     {
-      name: "David Clutter",
+      name: "Development Partner",
       role: "Development Partner",
       description: "We are hiring development interns! To apply, please email your resume to info@boomeranglearning.com",
       imageSrc: "/placeholder.svg"
