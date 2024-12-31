@@ -183,15 +183,15 @@ const InstagramSection = () => (
     <div className="container mx-auto px-4">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {/* Instagram Column */}
-        <div>
+        <div className="flex flex-col items-center">
           <h2 className="text-4xl font-bold text-center mb-10">Follow Us on Instagram</h2>
-          <div className="max-w-xl mx-auto">
+          <div className="bg-white p-8 rounded-lg shadow-lg max-w-xl w-full">
             <InstagramFeed />
           </div>
         </div>
         
         {/* LinkedIn Column */}
-        <div className="flex flex-col items-center justify-center">
+        <div className="flex flex-col items-center">
           <h2 className="text-4xl font-bold text-center mb-10">Connect on LinkedIn</h2>
           <div className="bg-white p-8 rounded-lg shadow-lg max-w-xl w-full">
             <div className="flex flex-col items-center text-center">
