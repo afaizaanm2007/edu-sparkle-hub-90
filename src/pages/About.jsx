@@ -46,17 +46,13 @@ const About = () => {
     {
       name: "Jonathan Baker",
       role: "Development Partner",
-      description: "I am an aspiring back-end developer pursuing a degree in Computer Science. I am passionate about contributing to the tech community and striving to improve society.",
-      linkedinUrl: "https://www.linkedin.com/in/jonathanr-baker",
-      instagramUrl: "#",
+      description: "We are currently undergoing staff changes and this page will soon be updated to reflect that.",
       imageSrc: "/placeholder.svg"
     },
     {
       name: "David Clutter",
       role: "Development Partner",
-      description: "David Clutter plays a key role in developing Boomerang Learning's solutions.",
-      linkedinUrl: "#",
-      instagramUrl: "#",
+      description: "We are hiring development interns! To apply, please email your resume to info@boomeranglearning.com",
       imageSrc: "/placeholder.svg"
     },
     {
